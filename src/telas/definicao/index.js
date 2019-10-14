@@ -1,0 +1,18 @@
+import React, {Component} from 'react';
+import {Container, Content, Text} from 'native-base';
+import stylesComuns from '../../styles/stylesComuns';
+import Cabecalho from '../../componentes/Cabecalho';
+
+export default class Definicao extends Component {
+  render() {
+    return (
+      <Container style={stylesComuns.container}>
+        <Cabecalho titulo="O que é?" {...this.props} />
+
+        <Content padder>
+          <Text>Texto e imagens da Definição</Text>
+        </Content>
+      </Container>
+    );
+  }
+}

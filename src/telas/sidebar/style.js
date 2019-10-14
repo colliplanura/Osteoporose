@@ -23,14 +23,14 @@ export default {
     position: 'relative',
     marginBottom: 10,
     resizeMode: 'contain',
-    backgroundColor: '#00A',
+    backgroundColor: '#4090f4',
   },
   titulo: {
     fontSize: 26,
     color: '#FFF',
   },
   icone: {
-    color: '#00A',
+    color: '#4090f4',
     fontSize: 36,
     width: 45,
   },

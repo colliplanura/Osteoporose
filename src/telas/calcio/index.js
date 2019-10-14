@@ -29,7 +29,6 @@ import InputSpinner from 'react-native-input-spinner';
 import stylesComuns from '../../styles/stylesComuns';
 
 import alimentos from '../../../dados/alimentos-abrasso';
-import alimentosAccordion from '../../../dados/alimentos-abrasso-accordion';
 
 const optionsSexo = [
   {
@@ -329,79 +328,77 @@ export default class Calcio extends Component {
 
   render() {
     return (
-      <Container style={stylesComuns.container}>
+      <KeyboardAvoidingView
+        style={stylesComuns.container}
+        behavior="padding"
+        enabled>
         <StatusBar barStyle="light-content" />
-        <KeyboardAvoidingView
-          style={styles.container}
-          behavior="padding"
-          enabled>
-          <Header style={stylesComuns.header}>
-            <Left>
-              <Button
-                transparent
-                onPress={() => this.props.navigation.openDrawer()}>
-                <Icon
-                  type="Entypo"
-                  name="menu"
-                  style={stylesComuns.iconeCabecalho}
-                />
-              </Button>
-            </Left>
-            <Body>
-              <Title style={stylesComuns.textoCabecalho}>Cálcio</Title>
-            </Body>
-            <Right>
-              <Button transparent onPress={this.limpar}>
-                <Icon
-                  type="Entypo"
-                  name="trash"
-                  style={stylesComuns.iconeCabecalho}
-                />
-              </Button>
-            </Right>
-          </Header>
+        <Header style={stylesComuns.header}>
+          <Left>
+            <Button
+              transparent
+              onPress={() => this.props.navigation.openDrawer()}>
+              <Icon
+                type="Entypo"
+                name="menu"
+                style={stylesComuns.iconeCabecalho}
+              />
+            </Button>
+          </Left>
+          <Body>
+            <Title style={stylesComuns.textoCabecalho}>Cálcio</Title>
+          </Body>
+          <Right>
+            <Button transparent onPress={this.limpar}>
+              <Icon
+                type="Entypo"
+                name="trash"
+                style={stylesComuns.iconeCabecalho}
+              />
+            </Button>
+          </Right>
+        </Header>
 
-          <FlatList
-            data={this.state.alimentos}
-            renderItem={this.renderItem}
-            keyExtractor={item => item.alimento}
-            stickyHeaderIndices={this.state.stickyHeaderIndices}
-          />
+        <FlatList
+          data={this.state.alimentos}
+          renderItem={this.renderItem}
+          keyExtractor={item => item.alimento}
+          stickyHeaderIndices={this.state.stickyHeaderIndices}
+        />
 
-          <Footer style={styles.rodape}>
-            <Body>
-              <Grid style={styles.gridResultado}>
-                <Row>
-                  <Col size={3}>
-                    <Text style={styles.labelRodape}>Cálcio Recomendado:</Text>
-                  </Col>
-                  <Col size={1}>
-                    <Text style={styles.textoResultado}>
-                      {this.state.calcioRecomendado}
+        <Footer style={styles.rodape}>
+          <Body>
+            <Grid style={styles.gridResultado}>
+              <Row>
+                <Col size={3}>
+                  <Text style={styles.labelRodape}>Cálcio Recomendado:</Text>
+                </Col>
+                <Col size={1}>
+                  <Text style={styles.textoResultado}>
+                    {this.state.calcioRecomendado}
+                  </Text>
+                </Col>
+              </Row>
+              <Row>
+                <Col size={3}>
+                  <Text style={styles.labelRodape}>Cálcio da Dieta:</Text>
+                </Col>
+                <Col size={1}>
+                  {this.state.calcioDieta < this.state.calcioRecomendado ? (
+                    <Text style={styles.textoResultadoNegativo}>
+                      {this.state.calcioDieta}
                     </Text>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col size={3}>
-                    <Text style={styles.labelRodape}>Cálcio da Dieta:</Text>
-                  </Col>
-                  <Col size={1}>
-                    {this.state.calcioDieta < this.state.calcioRecomendado ? (
-                      <Text style={styles.textoResultadoNegativo}>
-                        {this.state.calcioDieta}
-                      </Text>
-                    ) : (
-                      <Text style={styles.textoResultado}>
-                        {this.state.calcioDieta}
-                      </Text>
-                    )}
-                  </Col>
-                </Row>
-              </Grid>
-            </Body>
-          </Footer>
-        </KeyboardAvoidingView>
-      </Container>
+                  ) : (
+                    <Text style={styles.textoResultado}>
+                      {this.state.calcioDieta}
+                    </Text>
+                  )}
+                </Col>
+              </Row>
+            </Grid>
+          </Body>
+        </Footer>
+      </KeyboardAvoidingView>
     );
   }
 }

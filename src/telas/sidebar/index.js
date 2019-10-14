@@ -86,7 +86,7 @@ export default class SideBar extends Component {
     return (
       <Container style={styles.sideBar}>
         <StatusBar barStyle="light-content" />
-        <Header style={{backgroundColor: '#00A'}}>
+        <Header style={{backgroundColor: '#4090f4'}}>
           <Body>
             <Title style={styles.titulo}>OSTEOPOROSE</Title>
           </Body>

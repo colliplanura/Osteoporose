@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {Image, StatusBar} from 'react-native';
+import {Image} from 'react-native';
 import {
   Content,
   Text,
@@ -15,7 +15,7 @@ import {
 } from 'native-base';
 import styles from './style';
 
-const drawerCover = require('../../../assets/osteoporose/Osteoporose-horizontal.png');
+const drawerCover = require('../../../assets/imagens/Osteoporose-horizontal.png');
 const datas = [
   {
     name: 'O que é osteoporose? ',
@@ -54,7 +54,7 @@ const datas = [
     iconType: 'Entypo',
   },
   {
-    name: 'Risco de Fraturas ',
+    name: 'Risco de Fraturas FRAX®',
     route: 'Fratura',
     icon: 'bone',
     iconType: 'FontAwesome5',
@@ -85,7 +85,7 @@ export default class SideBar extends Component {
   render() {
     return (
       <Container style={styles.sideBar}>
-        <StatusBar barStyle="light-content" />
+        {/* <StatusBar barStyle="light-content" /> */}
         <Header style={{backgroundColor: '#4090f4'}}>
           <Body>
             <Title style={styles.titulo}>OSTEOPOROSE</Title>
@@ -95,6 +95,7 @@ export default class SideBar extends Component {
           <Image source={drawerCover} style={styles.drawerCover} />
           <List
             dataArray={datas}
+            keyExtractor={data => data.route}
             renderRow={data => (
               <ListItem
                 button

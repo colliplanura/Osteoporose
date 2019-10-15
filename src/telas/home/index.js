@@ -5,7 +5,7 @@ import {Container, Content} from 'native-base';
 import stylesComuns from '../../styles/stylesComuns';
 import Cabecalho from '../../componentes/Cabecalho';
 
-const launchscreenLogo = require('../../../assets/osteoporose/Osteoporose-corpo.png');
+const launchscreenLogo = require('../../../assets/imagens/Osteoporose-corpo.png');
 
 export default class Home extends Component {
   render() {

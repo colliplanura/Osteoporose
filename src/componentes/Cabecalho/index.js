@@ -9,7 +9,10 @@ export default class Cabecalho extends Component {
     return (
       <View>
         <StatusBar barStyle="light-content" />
-        <Header style={stylesComuns.header}>
+        <Header
+          style={stylesComuns.header}
+          androidStatusBarColor="#ffffff"
+          iosBarStyle="light-content">
           <Left>
             <Button
               transparent

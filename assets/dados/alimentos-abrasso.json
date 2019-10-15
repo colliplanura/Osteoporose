@@ -1,0 +1,1322 @@
+{
+  "alimentos": [
+    {
+      "key": 1,
+      "alimento": "Seus Dados",
+      "header": true
+    },
+    {
+      "key": 2,
+      "alimento": "formPaciente",
+      "paciente": true
+    },
+    {
+      "key": 3,
+      "alimento": "Medicamento",
+      "header": true
+    },
+    {
+      "key": 4,
+      "alimento": "Cálcio",
+      "porcao": "Comprimido 500 mg (ou equivalente)",
+      "calcioMg": 500
+    },
+    {
+      "key": 5,
+      "alimento": "Leites",
+      "header": true
+    },
+    {
+      "key": 6,
+      "alimento": "Leite fresco / Longa vida / Ninho",
+      "porcao": "Copo de 200 mL",
+      "calcioMg": 238
+    },
+    {
+      "key": 7,
+      "alimento": "MOLICO Total Cálcio® (Nestlé)",
+      "porcao": "2 colheres (sopa) = 20g",
+      "calcioMg": 500
+    },
+    {
+      "key": 8,
+      "alimento": "MOLICO Zero Lactose® (Nestlé)",
+      "porcao": "3 colheres (sopa) = 20g",
+      "calcioMg": 500
+    },
+    {
+      "key": 9,
+      "alimento": "Leite MOLICO® TotalCálcio UHT (Nestlé)",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 334
+    },
+    {
+      "key": 10,
+      "alimento": "Ninho Forti+ zero lactose (Nestlé)",
+      "porcao": "2 colheres (sopa) = 26g",
+      "calcioMg": 191
+    },
+    {
+      "key": 11,
+      "alimento": "Ninho Forti+ Integral (Nestlé)",
+      "porcao": "3 colheres (sopa) = 26g",
+      "calcioMg": 246
+    },
+    {
+      "key": 12,
+      "alimento": "Ninho Forti+ Levinho (Nestlé)",
+      "porcao": "4 colheres (sopa) = 26g",
+      "calcioMg": 316
+    },
+    {
+      "key": 13,
+      "alimento": "Leite Líquido NINHO Forti+ Integral UHT (Nestlé)",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 238
+    },
+    {
+      "key": 14,
+      "alimento": "Leite Líquido NINHO Forti+ Levinho UHT (Nestlé)",
+      "porcao": "2 copo = 200mL",
+      "calcioMg": 238
+    },
+    {
+      "key": 15,
+      "alimento": "Leite Líquido NINHO Forti+ Zero Lactose UHT (Nestlé)",
+      "porcao": "3 copo = 200mL",
+      "calcioMg": 238
+    },
+    {
+      "key": 16,
+      "alimento": "NINHO® Fases 1+ (Nestlé)",
+      "porcao": "7 colheres de medida = 32g",
+      "calcioMg": 320
+    },
+    {
+      "key": 17,
+      "alimento": "NINHO® Fases 3+ (Nestlé)",
+      "porcao": "8 colheres de medida = 32g",
+      "calcioMg": 416
+    },
+    {
+      "key": 18,
+      "alimento": "Leite Fazenda - Leite A integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 214
+    },
+    {
+      "key": 19,
+      "alimento": "Leite Fazenda - semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 220
+    },
+    {
+      "key": 20,
+      "alimento": "Leite Fazenda - desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 224
+    },
+    {
+      "key": 21,
+      "alimento": "Leite Itambé integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 22,
+      "alimento": "Leite Itambé semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 23,
+      "alimento": "Leite Itambé desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 260
+    },
+    {
+      "key": 24,
+      "alimento": "Leite Premium Cálcio Itambé",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 300
+    },
+    {
+      "key": 25,
+      "alimento": "Leite Itambé Dez Vitaminas",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 300
+    },
+    {
+      "key": 26,
+      "alimento": "Leite Itambé Zero lactose integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 27,
+      "alimento": "Leite Itambé Ferro",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 28,
+      "alimento": "Leite Itambé Zero lactose desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 260
+    },
+    {
+      "key": 29,
+      "alimento": "Leite C Pasteirizado Itambé ",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 30,
+      "alimento": "Leite Parmalat integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 300
+    },
+    {
+      "key": 31,
+      "alimento": "Leite Parmalat desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 300
+    },
+    {
+      "key": 32,
+      "alimento": "Leite Parmalat semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 300
+    },
+    {
+      "key": 33,
+      "alimento": "Leite Zymil Parmalat zero lactose",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 34,
+      "alimento": "Leite Mococa Integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 35,
+      "alimento": "Leite Mococa Semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 36,
+      "alimento": "Leite Mococa Desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 230
+    },
+    {
+      "key": 37,
+      "alimento": "Leite Mococa Zero lactose",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 250
+    },
+    {
+      "key": 38,
+      "alimento": "Leite Piracanjuba integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 39,
+      "alimento": "Leite Piracanjuba semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 243
+    },
+    {
+      "key": 40,
+      "alimento": "Leite Piracanjuba desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 244
+    },
+    {
+      "key": 41,
+      "alimento": "Leite Piracanjuba + cálcio",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 500
+    },
+    {
+      "key": 42,
+      "alimento": "Leite Piracanjuba desnatado + fibras",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 43,
+      "alimento": "Leite Piracanjuba zero lactose",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 232
+    },
+    {
+      "key": 44,
+      "alimento": "Leite em pó Piracanjuba",
+      "porcao": "1 e meia colher de sopa = 25g",
+      "calcioMg": 235
+    },
+    {
+      "key": 45,
+      "alimento": "Leite Sepha integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 46,
+      "alimento": "Leite Sepha semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 47,
+      "alimento": "Leite Shepha desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 48,
+      "alimento": "Leite Shepha zero Lactose",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 49,
+      "alimento": "Leite Shefa Original Soja",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 50,
+      "alimento": "Leite de soja AdeS Original e outros sabores",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 51,
+      "alimento": "Leite Italac integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 240
+    },
+    {
+      "key": 52,
+      "alimento": "Leite Italac semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 250
+    },
+    {
+      "key": 53,
+      "alimento": "Leite Italac desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 260
+    },
+    {
+      "key": 54,
+      "alimento": "Leite Italac em pó",
+      "porcao": "2 colheres de sopa = 25g",
+      "calcioMg": 250
+    },
+    {
+      "key": 55,
+      "alimento": "Leite Batavo integral",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 210
+    },
+    {
+      "key": 56,
+      "alimento": "Leite Batavo Semidesnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 210
+    },
+    {
+      "key": 57,
+      "alimento": "Leite Batavo Desnatado",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 210
+    },
+    {
+      "key": 58,
+      "alimento": "Leite Batavo Sensy Zero lactose",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 210
+    },
+    {
+      "key": 59,
+      "alimento": "Leite de cabra (Caprilat)",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 260
+    },
+    {
+      "key": 60,
+      "alimento": "Iogurtes",
+      "header": true
+    },
+    {
+      "key": 61,
+      "alimento": "Polpa Nestlé® sabor morango - bandeja com 6",
+      "porcao": "Unidade de 90 g",
+      "calcioMg": 116
+    },
+    {
+      "key": 62,
+      "alimento": "Chambinho® Morango - bandeja com 8 (Nestlé) ",
+      "porcao": "Unidade de 40 g",
+      "calcioMg": 188
+    },
+    {
+      "key": 63,
+      "alimento": "MOLICO® TotalCálcio Trisabor - bandeja com 6 (Nestlé)",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 500
+    },
+    {
+      "key": 64,
+      "alimento": "Iogurte MOLICO® TotalCálcio Natural (Nestlé)",
+      "porcao": "Unidade de 160g",
+      "calcioMg": 235
+    },
+    {
+      "key": 65,
+      "alimento": "MOLICO Total Cálcio® (Nestlé) Morango/ Vitamina de frutas/mamão",
+      "porcao": "Garrafinha de 170 g",
+      "calcioMg": 500
+    },
+    {
+      "key": 66,
+      "alimento": "Iogurte Nestlé ZeroLacto polpa de morango - bandeja com 4",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 121
+    },
+    {
+      "key": 67,
+      "alimento": "Iogurte Nestlé ZeroLacto - copo ",
+      "porcao": "Unidade de 150g",
+      "calcioMg": 201
+    },
+    {
+      "key": 68,
+      "alimento": "Iogurte Nestlé ZeroLacto - Líquido",
+      "porcao": "Garrafinha de 170g",
+      "calcioMg": 192
+    },
+    {
+      "key": 69,
+      "alimento": "Iogurte Nestlé Grego Tradiconal - bandeja com 4",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 177
+    },
+    {
+      "key": 70,
+      "alimento": "Nestlé Grego Cocada",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 190
+    },
+    {
+      "key": 71,
+      "alimento": "Iogurte Nestlé Grego Light Sabor Baunilha - bandeja com 4",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 143
+    },
+    {
+      "key": 72,
+      "alimento": "Neston® Líquido",
+      "porcao": "Garrafinha de 180g",
+      "calcioMg": 175
+    },
+    {
+      "key": 73,
+      "alimento": "Ninho Fruti Morango (Nestlé)",
+      "porcao": "Garrafinha de 50g",
+      "calcioMg": 188
+    },
+    {
+      "key": 74,
+      "alimento": "NINHO® Petit Suisse Morango e Maça Banana - bandeja com 6 (Nestlé)",
+      "porcao": "Unidade de 40g",
+      "calcioMg": 188
+    },
+    {
+      "key": 75,
+      "alimento": "NINHO® Iogurte Líquido Maçã e Banana (Nestlé)",
+      "porcao": "Garrafinha de 170g",
+      "calcioMg": 188
+    },
+    {
+      "key": 76,
+      "alimento": "NINHO® Iogurte Zero Lactose Polpa Maça & Banana - bandeja com 4 (Nestlé)",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 169
+    },
+    {
+      "key": 77,
+      "alimento": "Iogurte Ultracremoso (VIGOR) Frutas vermelhas ou tradicional - bandeja com 6 ",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 170
+    },
+    {
+      "key": 78,
+      "alimento": "Vigor GREGO Tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 207
+    },
+    {
+      "key": 79,
+      "alimento": "Vigor GREGO Frutas vermelhas",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 188
+    },
+    {
+      "key": 80,
+      "alimento": "Vigor GREGO Frutas Mel e Blueberry",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 184
+    },
+    {
+      "key": 81,
+      "alimento": "Vigor GREGO Frutas Morango e baunilha",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 196
+    },
+    {
+      "key": 82,
+      "alimento": "Vigor GREGO Zero gorduras Tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 283
+    },
+    {
+      "key": 83,
+      "alimento": "Vigor GREGO Zero gorduras Baunilha",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 315
+    },
+    {
+      "key": 84,
+      "alimento": "Vigor GREGO Zero gorduras Maracujá",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 256
+    },
+    {
+      "key": 85,
+      "alimento": "Vigor GREGO Zero Lactose Morango",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 256
+    },
+    {
+      "key": 86,
+      "alimento": "Vigor GREGO Zero Lactose Frutas vermelhas",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 188
+    },
+    {
+      "key": 87,
+      "alimento": "Vigor GREGO Zero Lactose Tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 207
+    },
+    {
+      "key": 88,
+      "alimento": "Vigor GREGO Zero Lactose Zero Gorduras Tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 315
+    },
+    {
+      "key": 89,
+      "alimento": "Vigor Polpa Sabores - bandeja com 6",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 101
+    },
+    {
+      "key": 90,
+      "alimento": "Vigor Polpa Infantil Morango ou vitamina de frutas - bandeja com 6",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 168
+    },
+    {
+      "key": 91,
+      "alimento": "Petit Suisse VIGOR Chocolate - bandeja com 8",
+      "porcao": "Unidade de 45g",
+      "calcioMg": 188
+    },
+    {
+      "key": 92,
+      "alimento": "Petit Suisse VIGOR Morango - bandeja com 8",
+      "porcao": "Unidade de 45g",
+      "calcioMg": 191
+    },
+    {
+      "key": 93,
+      "alimento": "Iogurte Líquido infantil VIGOR Vitamina de frutas ou morango",
+      "porcao": "Garrafinha de 180g",
+      "calcioMg": 302
+    },
+    {
+      "key": 94,
+      "alimento": "Mix Vigor Morango + chocomax ",
+      "porcao": "Unidade de 165g",
+      "calcioMg": 162
+    },
+    {
+      "key": 95,
+      "alimento": "Mix Vigor Tradicional + cereal",
+      "porcao": "Unidade de 165g",
+      "calcioMg": 160
+    },
+    {
+      "key": 96,
+      "alimento": "Mix Vigor Morango + Colorball",
+      "porcao": "Unidade de 165g",
+      "calcioMg": 160
+    },
+    {
+      "key": 97,
+      "alimento": "Mix Vigor Morango + Cereal",
+      "porcao": "Unidade de 165g",
+      "calcioMg": 160
+    },
+    {
+      "key": 98,
+      "alimento": "Iogurte Líquido (VIGOR) Natural Batido",
+      "porcao": "Unidade 180g",
+      "calcioMg": 171
+    },
+    {
+      "key": 99,
+      "alimento": "Iogurte Natural Zero Lactose Integral Ameixa",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 195
+    },
+    {
+      "key": 100,
+      "alimento": "Iogurte Natural Zero Lactose Integral ",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 243
+    },
+    {
+      "key": 101,
+      "alimento": "Iogurte Natural Zero Lactose Desnatado",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 255
+    },
+    {
+      "key": 102,
+      "alimento": "Activia ameixa (DANONE)",
+      "porcao": "Unidade de 110g",
+      "calcioMg": 154
+    },
+    {
+      "key": 103,
+      "alimento": "Activia Café da manhã ameixa, baunilha e cereais (Danone)",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 244
+    },
+    {
+      "key": 104,
+      "alimento": "Activia Polpa - mamão e cereais (Danone) - bandeja com 6 ",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 119
+    },
+    {
+      "key": 105,
+      "alimento": "Activia polpa ameixa e morango (DANONE) - bandeja com 6",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 122
+    },
+    {
+      "key": 106,
+      "alimento": "Activia polpa coco (DANONE) - bandeja com 4",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 135
+    },
+    {
+      "key": 107,
+      "alimento": "Activia polpa Integral (DANONE) - bandeja com 4",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 123
+    },
+    {
+      "key": 108,
+      "alimento": "Activia polpa 0% gorduras - sabor ameixa e morango (Danone) - bandeja com 8 ",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 166
+    },
+    {
+      "key": 109,
+      "alimento": "Activia Líquido ameixa ou morango (DANONE)",
+      "porcao": "Unidade de 150g",
+      "calcioMg": 149
+    },
+    {
+      "key": 110,
+      "alimento": "Activia Líquido zero lactoser ameixa ou morango (DANONE)",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 233
+    },
+    {
+      "key": 111,
+      "alimento": "Activia líquido 0% gorduras (Danone) Sabor morango - embalagem de 850g ",
+      "porcao": "1 copo (200mL)",
+      "calcioMg": 257
+    },
+    {
+      "key": 112,
+      "alimento": "Iogurte natural parcialmente desnatado FAZENDA ",
+      "porcao": "1 copo (170g)",
+      "calcioMg": 271
+    },
+    {
+      "key": 113,
+      "alimento": "Iogurte Líquido Morango Light FAZENDA",
+      "porcao": "1 copo (200g)",
+      "calcioMg": 218
+    },
+    {
+      "key": 114,
+      "alimento": "Danio Tradicional ou morango (Danone)",
+      "porcao": "Unidade de 125g",
+      "calcioMg": 127
+    },
+    {
+      "key": 115,
+      "alimento": "Danio pêssego ou blueberry (Danone)",
+      "porcao": "Unidade de 125g",
+      "calcioMg": 113
+    },
+    {
+      "key": 116,
+      "alimento": "Danoninho Ice morango e banana",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 150
+    },
+    {
+      "key": 117,
+      "alimento": "Danoninho líquido sabores",
+      "porcao": "Garrafinha de 100g",
+      "calcioMg": 150
+    },
+    {
+      "key": 118,
+      "alimento": "Danoninho baunilha e aveia - embalagem com 4",
+      "porcao": "Unidade de 55g",
+      "calcioMg": 183
+    },
+    {
+      "key": 119,
+      "alimento": "Danoninho banana e farinha láctea - embalagem com 4",
+      "porcao": "Unidade de 55g",
+      "calcioMg": 165
+    },
+    {
+      "key": 120,
+      "alimento": "Danoninho leitinho meio a meio - embalagem com 4",
+      "porcao": "Unidade de 40g",
+      "calcioMg": 150
+    },
+    {
+      "key": 121,
+      "alimento": "Danoninho Petit Suisse - embalagem com 6",
+      "porcao": "Unidade de 40g",
+      "calcioMg": 150
+    },
+    {
+      "key": 122,
+      "alimento": "Danoninho líquido",
+      "porcao": "Garrafinha de 180g",
+      "calcioMg": 150
+    },
+    {
+      "key": 123,
+      "alimento": "Iogurte Danone líquido - embalagem de 900mL",
+      "porcao": "1 copo de 200mL",
+      "calcioMg": 167
+    },
+    {
+      "key": 124,
+      "alimento": "Iogurte Danone Grego morango tradicional ou light - embalagem com 6 ou 8",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 142
+    },
+    {
+      "key": 125,
+      "alimento": "Danone iogurte desnatado",
+      "porcao": "1 copo de 170g",
+      "calcioMg": 315
+    },
+    {
+      "key": 126,
+      "alimento": "Danone iogurte integral adoçado",
+      "porcao": "2 copo de 170g",
+      "calcioMg": 212
+    },
+    {
+      "key": 127,
+      "alimento": "Iogurte Danone Grego com calda sabor Morango com Fondue",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 145
+    },
+    {
+      "key": 128,
+      "alimento": "Danone Grego Sabor Tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 161
+    },
+    {
+      "key": 129,
+      "alimento": "Iogurte Danone Grego light",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 171
+    },
+    {
+      "key": 130,
+      "alimento": "Iogurte líquido Paulista Mamão e pêssego",
+      "porcao": "Garrafinha de 170g",
+      "calcioMg": 130
+    },
+    {
+      "key": 131,
+      "alimento": "Iogurte Paulista sabores - bandeja com 6",
+      "porcao": "1 unidade de 90g",
+      "calcioMg": 68
+    },
+    {
+      "key": 132,
+      "alimento": "Iogurte integral Paulista",
+      "porcao": "Unidae de 170g",
+      "calcioMg": 216
+    },
+    {
+      "key": 133,
+      "alimento": "Iogurte desnatado Paulista",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 315
+    },
+    {
+      "key": 134,
+      "alimento": "Iogurte Paulista Laranja cenoura e mel ou granola e mel",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 138
+    },
+    {
+      "key": 135,
+      "alimento": "Dupli Paulista Fazenda",
+      "porcao": "Unidade de 130g",
+      "calcioMg": 93
+    },
+    {
+      "key": 136,
+      "alimento": "Goody sabor morango (Itambé) - bandeja com 6",
+      "porcao": "Unidade de 90g",
+      "calcioMg": 72
+    },
+    {
+      "key": 137,
+      "alimento": "Petit Suisse Itambezinho sabores - bandeja com 6",
+      "porcao": "Unidade de 45g",
+      "calcioMg": 150
+    },
+    {
+      "key": 138,
+      "alimento": "Coalhada Itambé integral",
+      "porcao": "1 unidade de 130g",
+      "calcioMg": 148
+    },
+    {
+      "key": 139,
+      "alimento": "Iogurte Natural desnatado Itambé",
+      "porcao": "1 unidade de 170",
+      "calcioMg": 305
+    },
+    {
+      "key": 140,
+      "alimento": "Iogurte Natural Itambé Integral",
+      "porcao": "1 unidade de 170",
+      "calcioMg": 240
+    },
+    {
+      "key": 141,
+      "alimento": "Iogurte Fit Itambé sabores",
+      "porcao": "1 unidade de 170g",
+      "calcioMg": 187
+    },
+    {
+      "key": 142,
+      "alimento": "Iogurte Batavo pedaço de fruta sabores",
+      "porcao": "1 unidade de 170g",
+      "calcioMg": 178
+    },
+    {
+      "key": 143,
+      "alimento": "Petit Suisse Batavinho - bandeja com 6",
+      "porcao": "1 unidade de 45g",
+      "calcioMg": 150
+    },
+    {
+      "key": 144,
+      "alimento": "Iogurte Grego Batavo sabores",
+      "porcao": "unidade de 100g",
+      "calcioMg": 118
+    },
+    {
+      "key": 145,
+      "alimento": "Iogurte Grego Batavo tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 129
+    },
+    {
+      "key": 146,
+      "alimento": "Iogurte Grego integral - bandeja com 6",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 137
+    },
+    {
+      "key": 147,
+      "alimento": "Iogurte Batavo Pense Zero morango - embalagem de 850g",
+      "porcao": "1 copo de 200g",
+      "calcioMg": 213
+    },
+    {
+      "key": 148,
+      "alimento": "Iogurte Batavo Pense Zero Mamão",
+      "porcao": "Unidade de 170g",
+      "calcioMg": 181
+    },
+    {
+      "key": 149,
+      "alimento": "Coalhada Caseira",
+      "porcao": "100g",
+      "calcioMg": 83
+    },
+    {
+      "key": 150,
+      "alimento": "Leites Fermentados",
+      "header": true
+    },
+    {
+      "key": 151,
+      "alimento": "Leite fermentado Yakult",
+      "porcao": " Unidade de 80 g",
+      "calcioMg": 69
+    },
+    {
+      "key": 152,
+      "alimento": "Leite fermentado Chamyto",
+      "porcao": "Unidade de 75g",
+      "calcioMg": 66
+    },
+    {
+      "key": 153,
+      "alimento": "Actimel morango ou tradicional",
+      "porcao": "Unidade de 100g",
+      "calcioMg": 102
+    },
+    {
+      "key": 154,
+      "alimento": "Ninho® Leite fermentado (Nestlé)",
+      "porcao": "Garrafinha de 75g",
+      "calcioMg": 188
+    },
+    {
+      "key": 155,
+      "alimento": "Leite fermentado Itambé ",
+      "porcao": "Garrafinha de 75g",
+      "calcioMg": 73
+    },
+    {
+      "key": 156,
+      "alimento": "Leite Fermentado Vigor",
+      "porcao": "Garrafinha de 75g",
+      "calcioMg": 63
+    },
+    {
+      "key": 157,
+      "alimento": "Queijos",
+      "header": true
+    },
+    {
+      "key": 158,
+      "alimento": "Quejo coalho (Quatá)",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 198
+    },
+    {
+      "key": 159,
+      "alimento": "Queijo minas frescal tradicional (Quatá)",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 174
+    },
+    {
+      "key": 160,
+      "alimento": "Queijo minas frescal light",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 174
+    },
+    {
+      "key": 161,
+      "alimento": "Queijo Mussarela Italac",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 160
+    },
+    {
+      "key": 162,
+      "alimento": "Queijo Provolone Italac",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 227
+    },
+    {
+      "key": 163,
+      "alimento": "Queijo mussarela Piracanjuba",
+      "porcao": "2 fatias = 30g",
+      "calcioMg": 219
+    },
+    {
+      "key": 164,
+      "alimento": "Polenguinho tradicional",
+      "porcao": "2 unidade = 30g",
+      "calcioMg": 105
+    },
+    {
+      "key": 165,
+      "alimento": "Polenguinho light",
+      "porcao": "2 unidades = 30g",
+      "calcioMg": 135
+    },
+    {
+      "key": 166,
+      "alimento": "Polenguinho zero lactose",
+      "porcao": "2 unidades = 30g",
+      "calcioMg": 124
+    },
+    {
+      "key": 167,
+      "alimento": "Queijo tipo Brie Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 130
+    },
+    {
+      "key": 168,
+      "alimento": "Queijo tipo Camembert Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 196
+    },
+    {
+      "key": 169,
+      "alimento": "Queijo tipo parmesão Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 294
+    },
+    {
+      "key": 170,
+      "alimento": "Queijo tipo Grana Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 337
+    },
+    {
+      "key": 171,
+      "alimento": "Queijo ralado Polengui",
+      "porcao": "1 colher de sopa = 10g",
+      "calcioMg": 112
+    },
+    {
+      "key": 172,
+      "alimento": "Queijo tipo Gorgonzola Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 171
+    },
+    {
+      "key": 173,
+      "alimento": "Queijo Tipo Bleu de Bresse Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 168
+    },
+    {
+      "key": 174,
+      "alimento": "Queijo Tipo Pategrás Polengui",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 225
+    },
+    {
+      "key": 175,
+      "alimento": "Queijo tipo Brie Campo Lindo",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 234
+    },
+    {
+      "key": 176,
+      "alimento": "Queijo tipo camembert Campo Lindo",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 196
+    },
+    {
+      "key": 177,
+      "alimento": "Queijo tipo gorgonzola Campo Lindo",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 171
+    },
+    {
+      "key": 178,
+      "alimento": "Creme de ricota light (Polengui)",
+      "porcao": "1 colher de sopa = 30g",
+      "calcioMg": 150
+    },
+    {
+      "key": 179,
+      "alimento": "Queijo frescatino (Polengui)",
+      "porcao": "1 fatia média = 30g",
+      "calcioMg": 114
+    },
+    {
+      "key": 180,
+      "alimento": "Quejo minas frescal ultrafiltrado (Polengui)",
+      "porcao": "2 colheres de sopa = 50g",
+      "calcioMg": 190
+    },
+    {
+      "key": 181,
+      "alimento": "Queijo Minas Frescal cremoso (Polengui)",
+      "porcao": "1 colher de sopa = 30g",
+      "calcioMg": 150
+    },
+    {
+      "key": 182,
+      "alimento": "Mussarela de búfala (Almeida Prado)",
+      "porcao": "3 bolinhas = 30g",
+      "calcioMg": 62
+    },
+    {
+      "key": 183,
+      "alimento": "Outros",
+      "header": true
+    },
+    {
+      "key": 184,
+      "alimento": "NESCAU® Tradicional",
+      "porcao": "2 colheres (sopa) = 20g",
+      "calcioMg": 188
+    },
+    {
+      "key": 185,
+      "alimento": "NESCAU® 2.0",
+      "porcao": "1 colheres (sopa) = 20g",
+      "calcioMg": 272
+    },
+    {
+      "key": 186,
+      "alimento": "NESCAU 3.0",
+      "porcao": "2 colheres (sopa) = 20g",
+      "calcioMg": 356
+    },
+    {
+      "key": 187,
+      "alimento": "NESCAU® Fast (Nestlé)",
+      "porcao": "Garrafinha de 270 mL",
+      "calcioMg": 256
+    },
+    {
+      "key": 188,
+      "alimento": "Nutren Kids (Nestlé)",
+      "porcao": "2 colheres (sopa) = 27,5 g",
+      "calcioMg": 314
+    },
+    {
+      "key": 189,
+      "alimento": "Cheerios cereal matinal sabor mel (Nestlé)",
+      "porcao": "3/4 de xícara = 30g",
+      "calcioMg": 176
+    },
+    {
+      "key": 190,
+      "alimento": "Corn Flakes® cereal (Nestlé)",
+      "porcao": "3/4 de xícara = 30g",
+      "calcioMg": 183
+    },
+    {
+      "key": 191,
+      "alimento": "Crunch® cereal (Nestlé)",
+      "porcao": "3/4 de xícara = 30g",
+      "calcioMg": 169
+    },
+    {
+      "key": 192,
+      "alimento": "Farinha láctea (Nestlé)",
+      "porcao": "4 colheres (sopa) = 30g",
+      "calcioMg": 78
+    },
+    {
+      "key": 193,
+      "alimento": "Composto lácteo IDEAL (Nestlé)",
+      "porcao": "2 colheres (sopa) = 28g",
+      "calcioMg": 213
+    },
+    {
+      "key": 194,
+      "alimento": "MOÇA®Flakes (Nestlé)",
+      "porcao": "3/4 de xícara = 30g",
+      "calcioMg": 193
+    },
+    {
+      "key": 195,
+      "alimento": "Neston® Fast (Nestlé)",
+      "porcao": "Garrafinha de 180g",
+      "calcioMg": 186
+    },
+    {
+      "key": 196,
+      "alimento": "NESCAU® Prontinho",
+      "porcao": "Caixinha de 200 mL",
+      "calcioMg": 190
+    },
+    {
+      "key": 197,
+      "alimento": "NESCAU® Prontinho Light",
+      "porcao": "Caixinha de 200 mL",
+      "calcioMg": 188
+    },
+    {
+      "key": 198,
+      "alimento": "NESQUIK® (Nestlé)",
+      "porcao": "2 colheres (sopa) = 14g",
+      "calcioMg": 188
+    },
+    {
+      "key": 199,
+      "alimento": "NESQUIK® Prontinho (Nestlé)",
+      "porcao": "Caixinha de 200 mL",
+      "calcioMg": 190
+    },
+    {
+      "key": 200,
+      "alimento": "NUTREN® Active (Nestlé) sabores",
+      "porcao": "2 colheres (sopa) = 31,5g",
+      "calcioMg": 325
+    },
+    {
+      "key": 201,
+      "alimento": "Suco Vig (VIGOR) Uva",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 169
+    },
+    {
+      "key": 202,
+      "alimento": "Suco Vig (VIGOR) Morango",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 150
+    },
+    {
+      "key": 203,
+      "alimento": "Suco Vig (VIGOR) Moracujá",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 169
+    },
+    {
+      "key": 204,
+      "alimento": "Requeijão VIGOR Light",
+      "porcao": "1 colher (sopa) = 30g",
+      "calcioMg": 107
+    },
+    {
+      "key": 205,
+      "alimento": "Flan Baunilha com caramelo (VIGOR)",
+      "porcao": "Unidade de 110g",
+      "calcioMg": 100
+    },
+    {
+      "key": 206,
+      "alimento": "Queijo ralado (VIGOR)",
+      "porcao": "1 colher (sopa) = 10g",
+      "calcioMg": 121
+    },
+    {
+      "key": 207,
+      "alimento": "Toddynho Garrafinha",
+      "porcao": "Garrafinha de 270 mL",
+      "calcioMg": 161
+    },
+    {
+      "key": 208,
+      "alimento": "Toddynho Garrafinha Light",
+      "porcao": "Garrafinha de 270 mL",
+      "calcioMg": 178
+    },
+    {
+      "key": 209,
+      "alimento": "Toddynho caixinha chocolate",
+      "porcao": "Unidade de 200 mL",
+      "calcioMg": 119
+    },
+    {
+      "key": 210,
+      "alimento": "Toddynho caixinha morango",
+      "porcao": "Unidade de 200 mL",
+      "calcioMg": 111
+    },
+    {
+      "key": 211,
+      "alimento": "Toddynho caixinha chocolate Light",
+      "porcao": "Unidade de 200 mL",
+      "calcioMg": 132
+    },
+    {
+      "key": 212,
+      "alimento": "Requeijão cremoso Danone",
+      "porcao": "1 colher de sopa (30g)",
+      "calcioMg": 84
+    },
+    {
+      "key": 213,
+      "alimento": "Flan Caramelo Paulista - Flanette",
+      "porcao": "Unidade de 110g",
+      "calcioMg": 59
+    },
+    {
+      "key": 214,
+      "alimento": "Parmalatinho Chocolate bebida láctea",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 177
+    },
+    {
+      "key": 215,
+      "alimento": "Mocoquinha chocolate bebida láctea",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 79
+    },
+    {
+      "key": 216,
+      "alimento": "Leite condensado Mococa",
+      "porcao": "2 colheres de sopa = 20g",
+      "calcioMg": 54
+    },
+    {
+      "key": 217,
+      "alimento": "Bebida a base de soja com chocolate (Shefa)",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 12.74
+    },
+    {
+      "key": 218,
+      "alimento": "Achocolatado Shefa ",
+      "porcao": "Caixinha de 200mL",
+      "calcioMg": 140
+    },
+    {
+      "key": 219,
+      "alimento": "Bebida láctea UHT de chocolate",
+      "porcao": "1 copo = 200mL",
+      "calcioMg": 126
+    },
+    {
+      "key": 220,
+      "alimento": "Requeijão cremoso culinário (Polengui)",
+      "porcao": "1 colher de sopa = 30g",
+      "calcioMg": 65
+    },
+    {
+      "key": 221,
+      "alimento": "Chocomilk Batavo",
+      "porcao": "Garrafinha de 200mL",
+      "calcioMg": 234
+    }
+  ]
+}

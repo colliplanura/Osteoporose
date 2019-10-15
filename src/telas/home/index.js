@@ -10,7 +10,7 @@ const launchscreenLogo = require('../../../assets/imagens/Osteoporose-corpo.png'
 export default class Home extends Component {
   render() {
     return (
-      <Container style={stylesComuns.container} behavior="padding" enabled>
+      <Container style={stylesComuns.container}>
         <Cabecalho titulo="Osteoporose" {...this.props} />
         <Content>
           <Image source={launchscreenLogo} resizeMode="cover" />

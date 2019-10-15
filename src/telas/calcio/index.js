@@ -275,6 +275,7 @@ export default class Calcio extends Component {
                     borderColor="#4b9bff"
                     hasPadding={true}
                     animationDuration={100}
+                    bold={true}
                   />
                 </Col>
               </Row>

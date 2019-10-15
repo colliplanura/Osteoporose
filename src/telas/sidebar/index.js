@@ -13,6 +13,8 @@ import {
   Title,
   Icon,
 } from 'native-base';
+
+import stylesComuns from '../../styles/stylesComuns';
 import styles from './style';
 
 const drawerCover = require('../../../assets/imagens/Osteoporose-horizontal.png');
@@ -85,8 +87,10 @@ export default class SideBar extends Component {
   render() {
     return (
       <Container style={styles.sideBar}>
-        {/* <StatusBar barStyle="light-content" /> */}
-        <Header style={{backgroundColor: '#4090f4'}}>
+        <Header
+          style={stylesComuns.header}
+          androidStatusBarColor="#ffffff"
+          iosBarStyle="light-content">
           <Body>
             <Title style={styles.titulo}>OSTEOPOROSE</Title>
           </Body>

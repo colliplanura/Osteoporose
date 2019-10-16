@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {Container} from 'native-base';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, Platform} from 'react-native';
 import stylesComuns from '../../styles/stylesComuns';
 import Cabecalho from '../../componentes/Cabecalho';
 import {WebView} from 'react-native-webview';
-
-const sobreHTML = require('../../../assets/html/sobre.html');
 
 export default class Sobre extends Component {
   render() {
@@ -13,7 +11,12 @@ export default class Sobre extends Component {
       <Container style={stylesComuns.container}>
         <Cabecalho titulo="Sobre" {...this.props} />
         <WebView
-          source={sobreHTML}
+          source={
+            Platform.OS === 'ios'
+              ? require('../../../assets/html/sobre.html')
+              : {uri: 'file:///android_asset/html/sobre.html'}
+          }
+          scalesPageToFit={true}
           startInLoadingState={true}
           renderLoading={() => (
             <ActivityIndicator size="large" color="#4090f4" />

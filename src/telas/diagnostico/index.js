@@ -1,11 +1,9 @@
 import React, {Component} from 'react';
 import {Container} from 'native-base';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, Platform} from 'react-native';
 import stylesComuns from '../../styles/stylesComuns';
 import Cabecalho from '../../componentes/Cabecalho';
 import {WebView} from 'react-native-webview';
-
-const diagnosticoHTML = require('../../../assets/html/diagnostico.html');
 
 export default class Diagnostico extends Component {
   render() {
@@ -13,7 +11,12 @@ export default class Diagnostico extends Component {
       <Container style={stylesComuns.container}>
         <Cabecalho titulo="Diagnóstico" {...this.props} />
         <WebView
-          source={diagnosticoHTML}
+          source={
+            Platform.OS === 'ios'
+              ? require('../../../assets/html/diagnostico.html')
+              : {uri: 'file:///android_asset/html/diagnostico.html'}
+          }
+          scalesPageToFit={true}
           startInLoadingState={true}
           renderLoading={() => (
             <ActivityIndicator size="large" color="#4090f4" />

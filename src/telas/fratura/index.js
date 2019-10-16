@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {ActivityIndicator} from 'react-native';
+import {ActivityIndicator, StatusBar} from 'react-native';
 import {
   Container,
   Header,
@@ -17,9 +18,10 @@ export default class Fratura extends Component {
   render() {
     return (
       <Container style={stylesComuns.container}>
+        <StatusBar setBarStyle={{style: 'light-content', animated: true}} />
         <Header
           style={stylesComuns.header}
-          androidStatusBarColor="#ffffff"
+          androidStatusBarColor="#4090f4"
           iosBarStyle="light-content">
           <Left>
             <Button
@@ -51,9 +53,7 @@ export default class Fratura extends Component {
         </Header>
         <WebView
           ref={WEBVIEW_REF => (this.WebViewRef = WEBVIEW_REF)}
-          source={{
-            uri: 'https://abrasso.org.br/calculadora/calculadora/',
-          }}
+          source={{uri: 'https://abrasso.org.br/calculadora/calculadora/'}}
           startInLoadingState={true}
           renderLoading={() => (
             <ActivityIndicator size="large" color="#4090f4" />

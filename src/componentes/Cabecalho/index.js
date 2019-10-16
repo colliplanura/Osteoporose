@@ -8,10 +8,10 @@ export default class Cabecalho extends Component {
   render() {
     return (
       <View>
-        <StatusBar barStyle="light-content" />
+        <StatusBar barStyle="light-content" animated={true} />
         <Header
           style={stylesComuns.header}
-          androidStatusBarColor="#ffffff"
+          androidStatusBarColor="#4090f4"
           iosBarStyle="light-content">
           <Left>
             <Button

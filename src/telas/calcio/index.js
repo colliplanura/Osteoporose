@@ -1,11 +1,10 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {FlatList, KeyboardAvoidingView, StyleSheet} from 'react-native';
+import {KeyboardAvoidingView, StyleSheet, View, StatusBar} from 'react-native';
 import {
   Container,
   Body,
   Text,
-  ListItem,
   Footer,
   Item,
   Input,
@@ -16,6 +15,9 @@ import {
   Left,
   Right,
   Title,
+  Accordion,
+  Card,
+  CardItem,
 } from 'native-base';
 import {Grid, Row, Col} from 'react-native-easy-grid';
 import SwitchSelector from 'react-native-switch-selector';
@@ -23,7 +25,7 @@ import InputSpinner from 'react-native-input-spinner';
 
 import stylesComuns from '../../styles/stylesComuns';
 
-import {alimentos} from '../../../assets/dados/alimentos-abrasso.json';
+import {alimentos} from '../../../assets/dados/alimentos-abrasso-estruturado.json';
 
 const optionsSexo = [
   {
@@ -68,14 +70,14 @@ export default class Calcio extends Component {
     stickyHeaderIndices: [],
   };
 
-  componentDidMount() {
-    for (let i = 0; i < this.state.alimentos.length; i++) {
-      if (this.state.alimentos[i].header) {
-        this.state.stickyHeaderIndices.push(i);
-      }
-    }
-    this.state.stickyHeaderIndices.push(0);
-  }
+  // componentDidMount() {
+  //   for (let i = 0; i < this.state.alimentos.length; i++) {
+  //     if (this.state.alimentos[i].header) {
+  //       this.state.stickyHeaderIndices.push(i);
+  //     }
+  //   }
+  //   this.state.stickyHeaderIndices.push(0);
+  // }
 
   alterarIdadeAnos = text => {
     this.setState({idadeAnos: text}, this.recalcularCalcioRecomendado);
@@ -165,10 +167,12 @@ export default class Calcio extends Component {
 
   recalcularCalcioIngerido = () => {
     let calcioDieta = 0;
-    this.state.alimentos.forEach(alimento => {
-      if (alimento.quantidade) {
-        calcioDieta += alimento.quantidade * alimento.calcioMg;
-      }
+    this.state.alimentos.forEach(tipo => {
+      tipo.tabAlimentos.forEach(alimento => {
+        if (alimento.quantidade) {
+          calcioDieta += alimento.quantidade * alimento.calcioMg;
+        }
+      });
     });
     this.setState({calcioDieta: calcioDieta});
   };
@@ -182,226 +186,272 @@ export default class Calcio extends Component {
       sexo: 'F',
       periodo: 'D',
     });
-    this.sexoSwitch.toggleItem(1);
-    this.periodoSwitch.toggleItem(0);
 
-    this.state.alimentos.forEach(alimento => {
-      alimento.quantidade = 0;
+    if (this.sexoSwitch) {
+      this.sexoSwitch.toggleItem(1);
+    }
+
+    if (this.periodoSwitch) {
+      this.periodoSwitch.toggleItem(0);
+    }
+
+    this.state.alimentos.forEach(tipo => {
+      tipo.tabAlimentos.forEach(alimento => {
+        alimento.quantidade = 0;
+      });
     });
   };
 
-  renderItem = ({item}) => {
-    if (item.header) {
-      return (
-        <ListItem itemDivider>
-          <Body style={styles.tituloSecao}>
-            <Text style={styles.textoTituloSecao}>{item.alimento}</Text>
-          </Body>
-        </ListItem>
-      );
+  renderHeaderAccordion(item, expanded) {
+    return (
+      <View style={styles.tituloSecao}>
+        <Text style={styles.textoTituloSecao}>{item.tipo}</Text>
+        {expanded ? (
+          <Icon
+            type="AntDesign"
+            name="up"
+            style={stylesComuns.iconeCabecalho}
+          />
+        ) : (
+          <Icon
+            type="AntDesign"
+            name="down"
+            style={stylesComuns.iconeCabecalho}
+          />
+        )}
+      </View>
+    );
+  }
+
+  renderLinha = item => {
+    if (item.item.paciente) {
+      return this.renderFormulario();
     } else {
-      if (item.paciente) {
-        return (
-          <ListItem>
-            <Grid>
-              <Row style={styles.linhaFormulario}>
-                <Col size={3}>
+      return this.renderAlimentos(item.item);
+    }
+  };
+
+  renderFormulario = () => {
+    return (
+      <Card>
+        <CardItem>
+          <Grid>
+            <Row style={styles.linhaFormulario}>
+              <Col size={3}>
+                <Item floatingLabel>
+                  <Label>Idade anos</Label>
+                  <Input
+                    selectTextOnFocus={true}
+                    placeholder="anos"
+                    placeholderTextColor="#A0A0A0"
+                    keyboardType="numeric"
+                    maxLength={3}
+                    value={this.state.idadeAnos}
+                    style={{borderColor: '#4090f4'}}
+                    onChangeText={this.alterarIdadeAnos}
+                  />
+                </Item>
+              </Col>
+              {(this.state.idadeAnos === '' ||
+                parseInt(this.state.idadeAnos, 10) === 0) && (
+                <Col size={1}>
                   <Item floatingLabel>
-                    <Label>Idade anos</Label>
+                    <Label>meses</Label>
                     <Input
                       selectTextOnFocus={true}
-                      placeholder="anos"
+                      placeholder="meses"
                       placeholderTextColor="#A0A0A0"
                       keyboardType="numeric"
-                      maxLength={3}
-                      value={this.state.idadeAnos}
+                      maxLength={2}
+                      value={this.state.idadeMeses}
                       style={{borderColor: '#4090f4'}}
-                      onChangeText={this.alterarIdadeAnos}
+                      onChangeText={this.alterarIdadeMeses}
                     />
                   </Item>
                 </Col>
-                {(this.state.idadeAnos === '' ||
-                  parseInt(this.state.idadeAnos, 10) === 0) && (
-                  <Col size={1}>
-                    <Item floatingLabel>
-                      <Label>meses</Label>
-                      <Input
-                        selectTextOnFocus={true}
-                        placeholder="meses"
-                        placeholderTextColor="#A0A0A0"
-                        keyboardType="numeric"
-                        maxLength={2}
-                        value={this.state.idadeMeses}
-                        style={{borderColor: '#4090f4'}}
-                        onChangeText={this.alterarIdadeMeses}
-                      />
-                    </Item>
-                  </Col>
-                )}
-              </Row>
-              <Row style={styles.linhaFormulario}>
-                <Col>
-                  <Text style={styles.textoLabelFormulario}>Sexo</Text>
-                  <SwitchSelector
-                    ref={ref => (this.sexoSwitch = ref)}
-                    onPress={this.alterarSexo}
-                    options={optionsSexo}
-                    initial={this.state.sexo === 'M' ? 0 : 1}
-                    textColor="#b1b1b1"
-                    buttonColor="#4b9bff"
-                    borderColor="#4b9bff"
-                    hasPadding={true}
-                    animationDuration={100}
-                    bold={true}
-                  />
-                </Col>
-              </Row>
-              <Row style={styles.linhaFormulario}>
-                <Col>
-                  <Text style={styles.textoLabelFormulario}>Periodicidade</Text>
-                  <SwitchSelector
-                    ref={ref => (this.periodoSwitch = ref)}
-                    onPress={this.alterarPeriodo}
-                    options={optionsPeriodo}
-                    initial={
-                      this.state.periodo === 'D'
-                        ? 0
-                        : this.state.periodo === 'S'
-                        ? 1
-                        : 2
-                    }
-                    textColor="#b1b1b1"
-                    buttonColor="#4b9bff"
-                    borderColor="#4b9bff"
-                    hasPadding={true}
-                    animationDuration={100}
-                    bold={true}
-                  />
-                </Col>
-              </Row>
-              <Row style={styles.textoLabelFormulario}>
-                <Col>
-                  <Text style={styles.textoOrientacaoPeriodicidade}>
-                    {this.state.periodo === 'D'
-                      ? 'Informe, dos alimentos abaixo, os consumidos ontem'
-                      : this.state.periodo === 'S'
-                      ? 'Informe, dos alimentos abaixo, os consumidos na última semana'
-                      : 'Informe, dos alimentos abaixo, os consumidos no último mes'}
-                  </Text>
-                </Col>
-              </Row>
-            </Grid>
-          </ListItem>
-        );
-      } else {
-        return (
-          <ListItem style={styles.lista}>
-            <Grid>
-              <Col size={5}>
-                <Row size={2}>
-                  <Text style={styles.textoAlimento}>{item.alimento}</Text>
-                </Row>
-                <Row size={1}>
-                  <Text style={styles.textoPorcao}>{item.porcao}</Text>
-                </Row>
-              </Col>
-              <Col size={3}>
-                <InputSpinner
-                  min={0}
-                  step={1}
-                  colorMax={'#4b9bff'}
-                  colorMin={'#4090f4'}
-                  showBorder={true}
-                  rounded={false}
-                  inputStyle={styles.inputQuantidade}
-                  value={item.quantidade}
-                  onChange={quantidade => {
-                    item.quantidade = quantidade;
-                    this.recalcularCalcioIngerido();
-                  }}
+              )}
+            </Row>
+            <Row style={styles.linhaFormulario}>
+              <Col>
+                <Text style={styles.textoLabelFormulario}>Sexo</Text>
+                <SwitchSelector
+                  ref={ref => (this.sexoSwitch = ref)}
+                  onPress={this.alterarSexo}
+                  options={optionsSexo}
+                  initial={this.state.sexo === 'M' ? 0 : 1}
+                  textColor="#b1b1b1"
+                  buttonColor="#4b9bff"
+                  borderColor="#4b9bff"
+                  hasPadding={true}
+                  animationDuration={100}
+                  bold={true}
                 />
               </Col>
-            </Grid>
-          </ListItem>
-        );
-      }
-    }
+            </Row>
+            <Row style={styles.linhaFormulario}>
+              <Col>
+                <Text style={styles.textoLabelFormulario}>Periodicidade</Text>
+                <SwitchSelector
+                  ref={ref => (this.periodoSwitch = ref)}
+                  onPress={this.alterarPeriodo}
+                  options={optionsPeriodo}
+                  initial={
+                    this.state.periodo === 'D'
+                      ? 0
+                      : this.state.periodo === 'S'
+                      ? 1
+                      : 2
+                  }
+                  textColor="#b1b1b1"
+                  buttonColor="#4b9bff"
+                  borderColor="#4b9bff"
+                  hasPadding={true}
+                  animationDuration={100}
+                  bold={true}
+                />
+              </Col>
+            </Row>
+            <Row style={styles.textoLabelFormulario}>
+              <Col>
+                <Text style={styles.textoOrientacaoPeriodicidade}>
+                  {this.state.periodo === 'D'
+                    ? 'Informe, dos alimentos abaixo, os consumidos ontem'
+                    : this.state.periodo === 'S'
+                    ? 'Informe, dos alimentos abaixo, os consumidos na última semana'
+                    : 'Informe, dos alimentos abaixo, os consumidos no último mes'}
+                </Text>
+              </Col>
+            </Row>
+          </Grid>
+        </CardItem>
+      </Card>
+    );
   };
+
+  renderAlimentos = item => {
+    return (
+      <CardItem>
+        <Grid>
+          <Col size={5}>
+            <Row size={2}>
+              <Text style={styles.textoAlimento}>{item.alimento}</Text>
+            </Row>
+            <Row size={1}>
+              <Text style={styles.textoPorcao}>{item.porcao}</Text>
+            </Row>
+          </Col>
+          <Col size={3}>
+            <InputSpinner
+              min={0}
+              step={1}
+              colorMax={'#4b9bff'}
+              colorMin={'#4090f4'}
+              showBorder={true}
+              rounded={false}
+              inputStyle={styles.inputQuantidade}
+              value={item.quantidade}
+              onChange={quantidade => {
+                item.quantidade = quantidade;
+                this.recalcularCalcioIngerido();
+              }}
+            />
+          </Col>
+        </Grid>
+      </CardItem>
+    );
+  };
+
+  renderCabecalho() {
+    return (
+      <Header
+        style={stylesComuns.header}
+        androidStatusBarColor="#4090f4"
+        iosBarStyle="light-content">
+        <Left>
+          <Button
+            transparent
+            onPress={() => this.props.navigation.openDrawer()}>
+            <Icon
+              type="Entypo"
+              name="menu"
+              style={stylesComuns.iconeCabecalho}
+            />
+          </Button>
+        </Left>
+        <Body>
+          <Title style={stylesComuns.textoCabecalho}>Cálcio</Title>
+        </Body>
+        <Right>
+          <Button transparent onPress={this.limpar}>
+            <Icon
+              type="Entypo"
+              name="trash"
+              style={stylesComuns.iconeCabecalho}
+            />
+          </Button>
+        </Right>
+      </Header>
+    );
+  }
+
+  renderRodape() {
+    return (
+      <Footer style={styles.rodape}>
+        <Body>
+          <Grid style={styles.gridResultado}>
+            <Row>
+              <Col size={3}>
+                <Text style={styles.labelRodape}>Cálcio Recomendado:</Text>
+              </Col>
+              <Col size={1}>
+                <Text style={styles.textoResultado}>
+                  {this.state.calcioRecomendado}
+                </Text>
+              </Col>
+            </Row>
+            <Row>
+              <Col size={3}>
+                <Text style={styles.labelRodape}>Cálcio da Dieta:</Text>
+              </Col>
+              <Col size={1}>
+                {this.state.calcioDieta < this.state.calcioRecomendado ? (
+                  <Text style={styles.textoResultadoNegativo}>
+                    {this.state.calcioDieta}
+                  </Text>
+                ) : (
+                  <Text style={styles.textoResultado}>
+                    {this.state.calcioDieta}
+                  </Text>
+                )}
+              </Col>
+            </Row>
+          </Grid>
+        </Body>
+      </Footer>
+    );
+  }
 
   render() {
     return (
       <Container style={stylesComuns.container}>
-        <Header
-          style={stylesComuns.header}
-          androidStatusBarColor="#ffffff"
-          iosBarStyle="light-content">
-          <Left>
-            <Button
-              transparent
-              onPress={() => this.props.navigation.openDrawer()}>
-              <Icon
-                type="Entypo"
-                name="menu"
-                style={stylesComuns.iconeCabecalho}
-              />
-            </Button>
-          </Left>
-          <Body>
-            <Title style={stylesComuns.textoCabecalho}>Cálcio</Title>
-          </Body>
-          <Right>
-            <Button transparent onPress={this.limpar}>
-              <Icon
-                type="Entypo"
-                name="trash"
-                style={stylesComuns.iconeCabecalho}
-              />
-            </Button>
-          </Right>
-        </Header>
+        <StatusBar setBarStyle={{style: 'light-content', animated: true}} />
+        {this.renderCabecalho()}
 
-        <FlatList
-          data={this.state.alimentos}
-          renderItem={this.renderItem}
-          keyExtractor={item => item.key.toString()}
-          stickyHeaderIndices={this.state.stickyHeaderIndices}
+        <Accordion
+          dataArray={this.state.alimentos}
+          animation={true}
+          expanded={true}
+          renderHeader={this.renderHeaderAccordion}
+          renderContent={item => (
+            <Card dataArray={item.tabAlimentos} renderRow={this.renderLinha} />
+          )}
         />
+
         <KeyboardAvoidingView
           style={stylesComuns.container}
           behavior="padding"
           enabled>
-          <Footer style={styles.rodape}>
-            <Body>
-              <Grid style={styles.gridResultado}>
-                <Row>
-                  <Col size={3}>
-                    <Text style={styles.labelRodape}>Cálcio Recomendado:</Text>
-                  </Col>
-                  <Col size={1}>
-                    <Text style={styles.textoResultado}>
-                      {this.state.calcioRecomendado}
-                    </Text>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col size={3}>
-                    <Text style={styles.labelRodape}>Cálcio da Dieta:</Text>
-                  </Col>
-                  <Col size={1}>
-                    {this.state.calcioDieta < this.state.calcioRecomendado ? (
-                      <Text style={styles.textoResultadoNegativo}>
-                        {this.state.calcioDieta}
-                      </Text>
-                    ) : (
-                      <Text style={styles.textoResultado}>
-                        {this.state.calcioDieta}
-                      </Text>
-                    )}
-                  </Col>
-                </Row>
-              </Grid>
-            </Body>
-          </Footer>
+          {this.renderRodape()}
         </KeyboardAvoidingView>
       </Container>
     );
@@ -418,18 +468,22 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   tituloSecao: {
+    flexDirection: 'row',
+    padding: 10,
+    justifyContent: 'space-between',
     alignItems: 'center',
+    backgroundColor: '#4090f4',
   },
   textoTituloSecao: {
-    textAlign: 'center',
     fontWeight: 'bold',
-    fontSize: 24,
+    fontSize: 20,
+    color: '#ffffff',
   },
   textoAlimento: {
     fontSize: 18,
   },
   textoPorcao: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#A0A0A0',
   },
   linhaFormulario: {
@@ -450,11 +504,17 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   rodape: {
+    height: 80,
+    borderTopColor: '#ffffff',
+    borderTopWidth: 3,
     backgroundColor: '#4090f4',
+    paddingTop: 5,
+    paddingLeft: 10,
   },
   labelRodape: {
-    fontSize: 20,
-    color: '#ffffff',
+    fontSize: 22,
+    color: '#000000',
+    fontWeight: 'bold',
   },
   textoResultado: {
     fontSize: 20,

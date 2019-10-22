@@ -31,6 +31,12 @@ const datas = [
     iconType: 'Entypo',
   },
   {
+    name: 'O que fazer para prevenir? ',
+    route: 'Prevencao',
+    icon: 'user-shield',
+    iconType: 'FontAwesome5',
+  },
+  {
     name: 'Como é feito o diagnóstico? ',
     route: 'Diagnostico',
     icon: 'diagnoses',
@@ -40,12 +46,6 @@ const datas = [
     name: 'Osteoporose tem cura? ',
     route: 'Tratamento',
     icon: 'pills',
-    iconType: 'FontAwesome5',
-  },
-  {
-    name: 'O que fazer para prevenir? ',
-    route: 'Prevencao',
-    icon: 'user-shield',
     iconType: 'FontAwesome5',
   },
   {

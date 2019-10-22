@@ -70,15 +70,6 @@ export default class Calcio extends Component {
     stickyHeaderIndices: [],
   };
 
-  // componentDidMount() {
-  //   for (let i = 0; i < this.state.alimentos.length; i++) {
-  //     if (this.state.alimentos[i].header) {
-  //       this.state.stickyHeaderIndices.push(i);
-  //     }
-  //   }
-  //   this.state.stickyHeaderIndices.push(0);
-  // }
-
   alterarIdadeAnos = text => {
     this.setState({idadeAnos: text}, this.recalcularCalcioRecomendado);
   };
@@ -331,7 +322,7 @@ export default class Calcio extends Component {
   renderAlimentos = item => {
     return (
       <CardItem>
-        <Grid>
+        <Grid style={{marginLeft: -10, marginRight: 20}}>
           <Col size={5}>
             <Row size={2}>
               <Text style={styles.textoAlimento}>{item.alimento}</Text>
@@ -440,7 +431,7 @@ export default class Calcio extends Component {
         <Accordion
           dataArray={this.state.alimentos}
           animation={true}
-          expanded={true}
+          expanded={0}
           renderHeader={this.renderHeaderAccordion}
           renderContent={item => (
             <Card dataArray={item.tabAlimentos} renderRow={this.renderLinha} />

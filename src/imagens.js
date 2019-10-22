@@ -1,0 +1,17 @@
+export default {
+  'active_childhood-620x424_0': require('../assets/imagens/active_childhood-620x424_0.jpg'),
+  'nutrients-11-00718-g001': require('../assets/imagens/nutrients-11-00718-g001.jpg'),
+  'Osteoporose-corpo': require('../assets/imagens/Osteoporose-corpo.png'),
+  'Osteoporose-horizontal': require('../assets/imagens/Osteoporose-horizontal.png'),
+  Osteoporose: require('../assets/imagens/Osteoporose.png'),
+  undraw_chilling_8tii: require('../assets/imagens/undraw_chilling_8tii.png'),
+  undraw_Hamburger_8ge6: require('../assets/imagens/undraw_Hamburger_8ge6.png'),
+  undraw_ice_cream_s2rh: require('../assets/imagens/undraw_ice_cream_s2rh.png'),
+  undraw_medicine_b1ol: require('../assets/imagens/undraw_medicine_b1ol.png'),
+  undraw_nature_fun_n9lv: require('../assets/imagens/undraw_nature_fun_n9lv.png'),
+  undraw_personal_trainer_ote3: require('../assets/imagens/undraw_personal_trainer_ote3.png'),
+  undraw_pilates_gpdb: require('../assets/imagens/undraw_pilates_gpdb.png'),
+  undraw_walking_around_25f5: require('../assets/imagens/undraw_walking_around_25f5.png'),
+  undraw_wine_tasting_30vw: require('../assets/imagens/undraw_wine_tasting_30vw.png'),
+  undraw_working_out_6psf: require('../assets/imagens/undraw_working_out_6psf.png'),
+};

@@ -1,0 +1,22 @@
+{
+    "paragrafos": [
+        {
+            "texto": "O exame padrão ouro para o diagnóstico da osteoporose é a Densitometria Mineral Óssea (DMO), cuja técnica mais utilizada é a absorciometria de raio-x de dupla emissão.3 Trata-se de um exame rápido, que avalia a densidade óssea em g/cm2 e a compara com indivíduos jovens saudáveis do mesmo sexo, resultando no T-SCORE - uma medida de dispersão que sinaliza quanto um resultado se distancia da mediana considerada.5 O diagnóstico de osteoporose é realizado quando o T-SCORE é menor ou igual a -2,5 desvios padrão."
+        },
+        {
+            "texto": "No entanto, a revisão das Diretrizes brasileiras para o diagnóstico e tratamento da osteoporose em mulheres na pós-menopausa,6 realizada em 2017, alinhada a recomendações divulgadas pelo National Bone Health Alliance Working Group em 2014,  estabelece critérios clínicos que devem ser adicionados à DMO para garantir maior acurácia e inclusão de pacientes com alto risco de fraturas. Dessa forma, o diagnóstico de osteoporose passar a ser realizado para as mulheres pós-menopausa e homens acima de 50 anos com:7"
+        },
+        {
+            "texto": "T-score menor ou igual a 2,5 desvios padrão. Considerar o pior valor entre as medidas da coluna lombar, colo femoral, fêmur total ou rádio terço distal;"
+        },
+        {
+            "texto": "História de fratura de bacia de baixa energia (queda da própria altura, por exemplo);"
+        },
+        {
+            "texto": "T-score entre -1 e -2,5 desvios padrão, com história de fratura de baixa energia em vértebra, úmero proximal, pelve ou antebraço distal;"
+        },
+        {
+            "texto": "Resultado do Instrumento de Avaliação do risco de fratura FRAX® apresentando elevado risco de fratura - maior ou igual a 3% em 10 anos para fratura de bacia, ou 20% em 10 anos para fraturas maiores (vértebra, úmero proximal, pelve ou antebraço distal)."
+        }
+    ]
+}

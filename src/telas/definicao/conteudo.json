@@ -1,0 +1,17 @@
+{
+    "paragrafos": [
+        {
+            "texto": "Osteoporose é uma doença metabólica caracterizada pelo enfraquecimento dos ossos causado pela perda gradual da massa óssea e pela alteração da sua microarquitetura. É uma doença óssea crônica associada com a elevação no risco de fraturas e, consequentemente, redução da qualidade de vida, além do aumento da morbimortalidade associada a fraturas.1"
+        },
+        {
+            "texto": "Trata-se de uma doença silenciosa, pois não causa sintomas nas fases iniciais ou durante a sua progressão. Em muitos casos, a primeira manifestação da doença é a ocorrência de fratura por mecanismo de baixa energia, ou até mesmo, a ocorrência de fratura espontânea, sem mecanismo de impacto."
+        },
+        {
+            "imagem": "Osteoporose.png",
+            "texto": "O osso é um complexo tecido celular vivo e dinâmico, composto em 70% do seu peso por mineral e os demais 30% por tecido orgânico. A fase mineral é constituída em 95% por hidroxiapatita, um cristal altamente organizado de Cálcio e Fósforo, que confere a propriedade de dureza ao osso; e o restante por outros íons. Já a fase orgânica, também chamada de osteóide, dos demais 30%, é formada em sua maior parte (98%) por fibras de colágeno, além de glicoproteínas, proteoglicanos e células.2"
+        },
+        {
+            "texto": "Apesar de sua aparência inerte, o osso está continuamente sendo remodelado, através da atuação de sua fase orgânica em processos de reabsorção (retirada de cálcio do osso) e formação (deposição de cálcio no osso). O remodelamento, é responsável pela renovação óssea, manutenção da microarquitetura e, dessa forma, da saúde do osso. Trata-se de um processo finamente controlado por diversos sistemas, entre eles, o sistema endócrino que atua a partir dos níveis de cálcio no sangue, promovendo a reabsorção quando os níveis de cálcio no sangue estão baixos, ou promovendo a formação quando o cálcio no sangue se eleva."
+        }
+    ]
+}

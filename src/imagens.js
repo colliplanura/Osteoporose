@@ -14,4 +14,5 @@ export default {
   undraw_walking_around_25f5: require('../assets/imagens/undraw_walking_around_25f5.png'),
   undraw_wine_tasting_30vw: require('../assets/imagens/undraw_wine_tasting_30vw.png'),
   undraw_working_out_6psf: require('../assets/imagens/undraw_working_out_6psf.png'),
+  densitometria: require('../assets/imagens/densitometria.jpeg'),
 };

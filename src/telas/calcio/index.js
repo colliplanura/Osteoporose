@@ -464,6 +464,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#4090f4',
+    marginTop: 5,
   },
   textoTituloSecao: {
     fontWeight: 'bold',
@@ -485,7 +486,7 @@ const styles = StyleSheet.create({
     color: '#A0A0A0',
   },
   textoOrientacaoPeriodicidade: {
-    color: '#D0D0D0',
+    color: '#000000',
     fontSize: 16,
     textAlign: 'center',
     marginVertical: 10,

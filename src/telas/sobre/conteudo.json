@@ -1,27 +1,26 @@
-{
-    "paragrafos": [
         {
-            "texto": "Este aplicativo foi desenvolvido como parte integrante do Trabalho de Conclusão do Curso de Medicina pela Faculdade de Educação e Saúde do Centro Universitário de Brasília - Uniceub para obtenção do grau de Bacharel.",
+            "texto": "Este aplicativo foi desenvolvido como parte integrante do Trabalho de Conclusão do Curso de Medicina pela Faculdade de Ciências da Educação e Saúde do Centro Universitário de Brasília - Uniceub para obtenção do grau de Bacharel.",
             "autores": [
                 {
+                    "key": "1",
                     "titulo": "Formando",
                     "nome": "Sandro Fernandes Colli da Silva",
                     "resumo": "Analista Sênior de TI na Diretoria de Tecnologia do Banco do Brasil SA. Especialista em Engenharia de Software com Ênfase em Software Livre pela Universidade Federal de Lavras (MG). Graduando em Medicina pelo Centro Universitário de Brasília (DF). colliplanura@gmail.com.",
                     "curriculo": "http://lattes.cnpq.br/3670261732858527"
                 },
                 {
+                    "key": "2",
                     "titulo": "Orientador",
                     "nome": "Marcello Oliveira Barbosa",
                     "resumo": "Médico Ortopedista no Hospital Regional do Paranoá (SES-DF) e Hospital das Forças Armadas. Professor adjunto do Centro Universitário de Brasília (DF). Graduado em Medicina pela Universidade de Brasília (DF). Mestre em Ortopedia, Traumatologia e Reabilitação pela Universidade de São Paulo (SP). drmarcellobarbos@gmail.com.",
                     "curriculo": "http://lattes.cnpq.br/6024932042946393"
                 },
                 {
-                    "titulo": "Co-orientador e idealizador do aplicativo",
+                    "key": "3",
+                    "titulo": "Coorientador e idealizador do aplicativo",
                     "nome": "Fabio Koiti Nishimori",
                     "resumo": "Médico Ortopedista no Hospital Regional de Santa Maria (SES-DF). Graduado em Medicina pela Universidade Estadual de Maringá (PR). Especialista em Ortopedia e Traumatologia. Especialista em Cirurgia do Quadril pela Irmandade Santa Casa de Misericórdia de São Paulo (SP). Mestre em Gerontologia pela Universidade Católica de Brasília (DF). fabionishi@gmail.com.",
                     "curriculo": "http://lattes.cnpq.br/4334886402366553"
                 }
             ]
         }
-    ]
-}

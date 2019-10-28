@@ -1,4 +1,4 @@
-package com.osteoporose;
+package br.com.colli.osteoporose;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

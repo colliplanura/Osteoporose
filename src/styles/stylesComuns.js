@@ -28,7 +28,14 @@ export default {
     justifyContent: 'center',
   },
   itemParagrafo: {
-    paddingVertical: 0,
-    marginVertical: 0,
+    width: '100%',
+    marginLeft: 0,
+    marginRight: 0,
+    marginTop: 0,
+    marginBottom: 0,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 5,
+    paddingBottom: 5,
   },
 };

@@ -9,7 +9,7 @@ import imagens from '../../imagens';
 export default class Prevencao extends Component {
   renderParagrafo(item) {
     return (
-      <ListItem noBorder>
+      <ListItem noBorder style={stylesComuns.itemParagrafo}>
         <Grid>
           <Row>
             <Text style={stylesComuns.paragrafo}>{item.item.texto}</Text>

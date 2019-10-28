@@ -1,7 +1,8 @@
 {
     "paragrafos": [
         {
-            "texto": "O exame padrão ouro para o diagnóstico da osteoporose é a Densitometria Mineral Óssea (DMO), cuja técnica mais utilizada é a absorciometria de raio-x de dupla emissão.3 Trata-se de um exame rápido, que avalia a densidade óssea em g/cm2 e a compara com indivíduos jovens saudáveis do mesmo sexo, resultando no T-SCORE - uma medida de dispersão que sinaliza quanto um resultado se distancia da mediana considerada.5 O diagnóstico de osteoporose é realizado quando o T-SCORE é menor ou igual a -2,5 desvios padrão."
+            "texto": "O exame padrão ouro para o diagnóstico da osteoporose é a Densitometria Mineral Óssea (DMO), cuja técnica mais utilizada é a absorciometria de raios-x de dupla emissão.3 Trata-se de um exame rápido, que avalia a densidade óssea em g/cm2 e a compara com indivíduos jovens saudáveis do mesmo sexo, resultando no T-SCORE - uma medida de dispersão que sinaliza quanto um resultado se distancia da mediana considerada.5 O diagnóstico de osteoporose é realizado quando o T-SCORE é menor ou igual a -2,5 desvios padrão.",
+            "imagem": "densitometria"
         },
         {
             "texto": "No entanto, a revisão das Diretrizes brasileiras para o diagnóstico e tratamento da osteoporose em mulheres na pós-menopausa,6 realizada em 2017, alinhada a recomendações divulgadas pelo National Bone Health Alliance Working Group em 2014,  estabelece critérios clínicos que devem ser adicionados à DMO para garantir maior acurácia e inclusão de pacientes com alto risco de fraturas. Dessa forma, o diagnóstico de osteoporose passar a ser realizado para as mulheres pós-menopausa e homens acima de 50 anos com:7"

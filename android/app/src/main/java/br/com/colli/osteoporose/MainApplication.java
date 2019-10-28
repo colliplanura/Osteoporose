@@ -1,4 +1,4 @@
-package com.osteoporose;
+package br.com.colli.osteoporose;
 
 import android.app.Application;
 import android.content.Context;

@@ -1,6 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {Image, StyleSheet, Linking} from 'react-native';
+import {StyleSheet, Linking} from 'react-native';
 import {
   Container,
   Content,
@@ -13,59 +12,36 @@ import {
 } from 'native-base';
 import stylesComuns from '../../styles/stylesComuns';
 import Cabecalho from '../../componentes/Cabecalho';
-import {paragrafos} from './conteudo.json';
-import imagens from '../../imagens';
+import {texto, autores} from './conteudo.json';
 
 export default class Sobre extends Component {
+  abrirCurriculo(textoLink) {
+    Linking.openURL(textoLink);
+  }
+
   renderAutores(item) {
     return (
-      <ListItem>
+      <ListItem style={stylesComuns.itemParagrafo}>
         <Grid>
           <Row>
-            <Text style={styles.rotulo}>{item.item.titulo}: </Text>
             <Text style={styles.nomeAutor}>{item.item.nome}</Text>
           </Row>
           <Row>
-            <Text style={styles.resumo}>{item.item.resumo}</Text>
+            <Text style={styles.rotulo}>{item.item.titulo}</Text>
           </Row>
-          <Row style={{justifyContent: 'center'}}>
+          <Row>
+            <Text style={(styles.resumo, stylesComuns.paragrafo)}>
+              {item.item.resumo}
+            </Text>
+          </Row>
+          <Row style={styles.botaoCurriculo}>
             <Button
+              transparent
               style={styles.link}
-              onPress={Linking.openURL(item.item.curriculo)}>
-              Ver currículo
+              onPress={() => Linking.openURL(item.item.curriculo)}>
+              <Text>Ver currículo</Text>
             </Button>
           </Row>
-        </Grid>
-      </ListItem>
-    );
-  }
-
-  renderParagrafo(item) {
-    return (
-      <ListItem noBorder>
-        <Grid>
-          <Row>
-            <Text style={stylesComuns.paragrafo}>{item.item.texto}</Text>
-          </Row>
-          {item.item.imagem && (
-            <Row>
-              <Image
-                source={imagens[item.item.imagem]}
-                style={stylesComuns.imagemTexto}
-              />
-            </Row>
-          )}
-          {item.item.legenda && (
-            <Row style={stylesComuns.linhaLegenda}>
-              <Text style={stylesComuns.legenda}>{item.item.legenda}</Text>
-            </Row>
-          )}
-          {item.item.autores && (
-            <List
-              dataArray={item.item.autores}
-              renderItem={this.renderAutores}
-            />
-          )}
         </Grid>
       </ListItem>
     );
@@ -76,7 +52,16 @@ export default class Sobre extends Component {
       <Container style={stylesComuns.container}>
         <Cabecalho titulo="Sobre" {...this.props} />
         <Content>
-          <List dataArray={paragrafos} renderItem={this.renderParagrafo} />
+          <List>
+            <ListItem>
+              <Grid>
+                <Row style={stylesComuns.paragrafo}>
+                  <Text style={stylesComuns.paragrafo}>{texto}</Text>
+                </Row>
+              </Grid>
+            </ListItem>
+          </List>
+          <List dataArray={autores} renderItem={this.renderAutores} />
         </Content>
       </Container>
     );
@@ -85,17 +70,23 @@ export default class Sobre extends Component {
 
 const styles = StyleSheet.create({
   rotulo: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: 'bold',
+    textAlign: 'justify',
   },
   nomeAutor: {
     fontSize: 16,
+    fontWeight: 'bold',
+    textAlign: 'justify',
   },
   resumo: {
     fontSize: 14,
   },
   link: {
-    fontSize: 16,
+    fontSize: 14,
     fontWeight: 'bold',
+  },
+  botaoCurriculo: {
+    justifyContent: 'flex-start',
   },
 });

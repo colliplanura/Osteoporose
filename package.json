@@ -1,6 +1,22 @@
 {
   "name": "osteoporose",
   "version": "0.0.1",
+  "description": "Informações sobre Osteoporose, Cálcio na dieta e Risco de Fraturas",
+  "author": {
+    "name": "Sandro Colli",
+    "email": "colliplanura@gmail.com",
+    "url": "http://lattes.cnpq.br/3670261732858527"
+  },
+  "contributors": [
+    {
+      "name": "Fábio Koiti Nishimori",
+      "url": "http://lattes.cnpq.br/4334886402366553"
+    },
+    {
+      "name": "Marcello Oliveira Barbosa",
+      "url": "http://lattes.cnpq.br/6024932042946393"
+    }
+  ],
   "private": true,
   "scripts": {
     "android": "react-native run-android",

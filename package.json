@@ -17,6 +17,22 @@
       "url": "http://lattes.cnpq.br/6024932042946393"
     }
   ],
+  "bugs": "https://github.com/colliplanura/Osteoporose/issues",
+  "homepage": "https://github.com/colliplanura/Osteoporose",
+  "license": "LGPL-3.0-ou-posterior",
+  "keywords": [
+    "Osteoporose",
+    "mHealth",
+    "Cálcio",
+    "Risco de Fraturas",
+    "Aplicativo para celular",
+    "Osteoporosis",
+    "mHealth",
+    "Calcium",
+    "Fractures risk",
+    "Mobile App"
+  ],
+  "repository": "github:colliplanura/Osteoporose",
   "private": true,
   "scripts": {
     "android": "react-native run-android",

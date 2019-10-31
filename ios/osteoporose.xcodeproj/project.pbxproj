@@ -22,6 +22,20 @@
 		F4167AA53901CC29B0675685 /* libPods-osteoporoseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C40607492D13754A08212A6D /* libPods-osteoporoseTests.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		AA5AA4D323682E1F0052DF1A /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXContainerItemProxy section */
 		00E356F41AD99517003FC87E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -233,6 +247,7 @@
 				273D7690DEBFE1D9C9FDBDEE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
+				AA5AA4D323682E1F0052DF1A /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -929,6 +944,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};

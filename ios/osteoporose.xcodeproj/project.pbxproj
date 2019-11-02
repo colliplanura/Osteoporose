@@ -705,6 +705,7 @@
 				DEVELOPMENT_TEAM = F6V2X5W23Z;
 				INFOPLIST_FILE = osteoporose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -726,6 +727,7 @@
 				DEVELOPMENT_TEAM = F6V2X5W23Z;
 				INFOPLIST_FILE = osteoporose/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

@@ -1,15 +1,6 @@
 {
     "alimentos": [
         {
-            "tipo": "Seus Dados",
-            "tabAlimentos": [
-                {
-                    "alimento": "formPaciente",
-                    "paciente": true
-                }
-            ]
-        },
-        {
             "tipo": "Medicamento",
             "tabAlimentos": [
                 {

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image} from 'react-native';
+import {Image, StatusBar} from 'react-native';
 import {
   Content,
   Text,
@@ -19,54 +19,63 @@ import styles from './style';
 const drawerCover = require('../../../assets/imagens/Osteoporose-horizontal.png');
 const datas = [
   {
+    key: '1',
     name: 'O que é osteoporose? ',
     route: 'Definicao',
     icon: 'question-circle',
     iconType: 'FontAwesome5',
   },
   {
+    key: '2',
     name: 'Quem está em risco? ',
     route: 'Risco',
     icon: 'emoji-sad',
     iconType: 'Entypo',
   },
   {
+    key: '3',
     name: 'O que fazer para prevenir? ',
     route: 'Prevencao',
     icon: 'user-shield',
     iconType: 'FontAwesome5',
   },
   {
+    key: '4',
     name: 'Como é feito o diagnóstico? ',
     route: 'Diagnostico',
     icon: 'diagnoses',
     iconType: 'FontAwesome5',
   },
   {
+    key: '5',
     name: 'Osteoporose tem cura? ',
     route: 'Tratamento',
     icon: 'pills',
     iconType: 'FontAwesome5',
   },
   {
+    key: '6',
     name: 'Cálcio na dieta ',
     route: 'Calcio',
     icon: 'calculator',
     iconType: 'Entypo',
   },
   {
+    key: '7',
     name: 'Risco de Fraturas FRAX®',
     route: 'Fratura',
     icon: 'bone',
     iconType: 'FontAwesome5',
   },
   {
+    key: '8',
     name: 'Referências',
     route: 'Referencias',
     icon: 'book',
     iconType: 'Entypo',
   },
   {
+    key: '9',
     name: 'Sobre nós ',
     route: 'Sobre',
     icon: 'info',
@@ -86,9 +95,10 @@ export default class SideBar extends Component {
   render() {
     return (
       <Container style={styles.sideBar}>
+        <StatusBar barStyle="light-content" animated={true} />
         <Header
           style={stylesComuns.header}
-          androidStatusBarColor="#ffffff"
+          androidStatusBarColor="#4090f4"
           iosBarStyle="light-content">
           <Body>
             <Title style={styles.titulo}>OSTEOPOROSE</Title>
@@ -98,7 +108,6 @@ export default class SideBar extends Component {
           <Image source={drawerCover} style={styles.drawerCover} />
           <List
             dataArray={datas}
-            keyExtractor={data => data.route}
             renderRow={data => (
               <ListItem
                 button

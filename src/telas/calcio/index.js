@@ -18,6 +18,7 @@ import {
   Accordion,
   Card,
   CardItem,
+  Content,
 } from 'native-base';
 import {Grid, Row, Col} from 'react-native-easy-grid';
 import SwitchSelector from 'react-native-switch-selector';
@@ -191,6 +192,8 @@ export default class Calcio extends Component {
         alimento.quantidade = 0;
       });
     });
+
+    this.componenteConteudo._root.scrollToPosition(0, 0);
   };
 
   renderHeaderAccordion(item, expanded) {
@@ -224,104 +227,100 @@ export default class Calcio extends Component {
 
   renderFormulario = () => {
     return (
-      <Card>
-        <CardItem>
-          <Grid>
-            <Row style={styles.linhaFormulario}>
-              <Col size={3}>
-                <Item floatingLabel>
-                  <Label>Idade anos</Label>
-                  <Input
-                    selectTextOnFocus={true}
-                    placeholder="anos"
-                    placeholderTextColor="#A0A0A0"
-                    keyboardType="numeric"
-                    maxLength={3}
-                    value={this.state.idadeAnos}
-                    style={{borderColor: '#4090f4'}}
-                    onChangeText={this.alterarIdadeAnos}
-                  />
-                </Item>
-              </Col>
-              {(this.state.idadeAnos === '' ||
-                parseInt(this.state.idadeAnos, 10) === 0) && (
-                <Col size={1}>
-                  <Item floatingLabel>
-                    <Label>meses</Label>
-                    <Input
-                      selectTextOnFocus={true}
-                      placeholder="meses"
-                      placeholderTextColor="#A0A0A0"
-                      keyboardType="numeric"
-                      maxLength={2}
-                      value={this.state.idadeMeses}
-                      style={{borderColor: '#4090f4'}}
-                      onChangeText={this.alterarIdadeMeses}
-                    />
-                  </Item>
-                </Col>
-              )}
-            </Row>
-            <Row style={styles.linhaFormulario}>
-              <Col>
-                <Text style={styles.textoLabelFormulario}>Sexo</Text>
-                <SwitchSelector
-                  ref={ref => (this.sexoSwitch = ref)}
-                  onPress={this.alterarSexo}
-                  options={optionsSexo}
-                  initial={this.state.sexo === 'M' ? 0 : 1}
-                  textColor="#b1b1b1"
-                  buttonColor="#4b9bff"
-                  borderColor="#4b9bff"
-                  hasPadding={true}
-                  animationDuration={100}
-                  bold={true}
+      <Grid style={{marginTop: 10}}>
+        <Row style={styles.linhaFormulario}>
+          <Col size={3}>
+            <Item floatingLabel>
+              <Label>Idade anos</Label>
+              <Input
+                selectTextOnFocus={true}
+                placeholder="anos"
+                placeholderTextColor="#A0A0A0"
+                keyboardType="numeric"
+                maxLength={3}
+                value={this.state.idadeAnos}
+                style={{borderColor: '#4090f4'}}
+                onChangeText={this.alterarIdadeAnos}
+              />
+            </Item>
+          </Col>
+          {(this.state.idadeAnos === '' ||
+            parseInt(this.state.idadeAnos, 10) === 0) && (
+            <Col size={1}>
+              <Item floatingLabel>
+                <Label>meses</Label>
+                <Input
+                  selectTextOnFocus={true}
+                  placeholder="meses"
+                  placeholderTextColor="#A0A0A0"
+                  keyboardType="numeric"
+                  maxLength={2}
+                  value={this.state.idadeMeses}
+                  style={{borderColor: '#4090f4'}}
+                  onChangeText={this.alterarIdadeMeses}
                 />
-              </Col>
-            </Row>
-            <Row style={styles.linhaFormulario}>
-              <Col>
-                <Text style={styles.textoLabelFormulario}>Periodicidade</Text>
-                <SwitchSelector
-                  ref={ref => (this.periodoSwitch = ref)}
-                  onPress={this.alterarPeriodo}
-                  options={optionsPeriodo}
-                  initial={
-                    this.state.periodo === 'D'
-                      ? 0
-                      : this.state.periodo === 'S'
-                      ? 1
-                      : 2
-                  }
-                  textColor="#b1b1b1"
-                  buttonColor="#4b9bff"
-                  borderColor="#4b9bff"
-                  hasPadding={true}
-                  animationDuration={100}
-                  bold={true}
-                />
-              </Col>
-            </Row>
-            <Row style={styles.textoLabelFormulario}>
-              <Col>
-                <Text style={styles.textoOrientacaoPeriodicidade}>
-                  {this.state.periodo === 'D'
-                    ? 'Informe, dos alimentos abaixo, os consumidos ontem'
-                    : this.state.periodo === 'S'
-                    ? 'Informe, dos alimentos abaixo, os consumidos na última semana'
-                    : 'Informe, dos alimentos abaixo, os consumidos no último mes'}
-                </Text>
-              </Col>
-            </Row>
-          </Grid>
-        </CardItem>
-      </Card>
+              </Item>
+            </Col>
+          )}
+        </Row>
+        <Row style={styles.linhaFormulario}>
+          <Col>
+            <Text style={styles.textoLabelFormulario}>Sexo</Text>
+            <SwitchSelector
+              ref={ref => (this.sexoSwitch = ref)}
+              onPress={this.alterarSexo}
+              options={optionsSexo}
+              initial={this.state.sexo === 'M' ? 0 : 1}
+              textColor="#b1b1b1"
+              buttonColor="#4b9bff"
+              borderColor="#4b9bff"
+              hasPadding={true}
+              animationDuration={100}
+              bold={true}
+            />
+          </Col>
+        </Row>
+        <Row style={styles.linhaFormulario}>
+          <Col>
+            <Text style={styles.textoLabelFormulario}>Periodicidade</Text>
+            <SwitchSelector
+              ref={ref => (this.periodoSwitch = ref)}
+              onPress={this.alterarPeriodo}
+              options={optionsPeriodo}
+              initial={
+                this.state.periodo === 'D'
+                  ? 0
+                  : this.state.periodo === 'S'
+                  ? 1
+                  : 2
+              }
+              textColor="#b1b1b1"
+              buttonColor="#4b9bff"
+              borderColor="#4b9bff"
+              hasPadding={true}
+              animationDuration={100}
+              bold={true}
+            />
+          </Col>
+        </Row>
+        <Row style={styles.textoLabelFormulario}>
+          <Col>
+            <Text style={styles.textoOrientacaoPeriodicidade}>
+              {this.state.periodo === 'D'
+                ? 'Informe, dos alimentos abaixo, os consumidos ontem'
+                : this.state.periodo === 'S'
+                ? 'Informe, dos alimentos abaixo, os consumidos na última semana'
+                : 'Informe, dos alimentos abaixo, os consumidos no último mes'}
+            </Text>
+          </Col>
+        </Row>
+      </Grid>
     );
   };
 
   renderAlimentos = item => {
     return (
-      <CardItem>
+      <CardItem style={{marginLeft: 0, marginRight: 0}}>
         <Grid style={{marginLeft: -10, marginRight: 20}}>
           <Col size={5}>
             <Row size={2}>
@@ -402,7 +401,13 @@ export default class Calcio extends Component {
             </Row>
             <Row>
               <Col size={3}>
-                <Text style={styles.labelRodape}>Cálcio da Dieta:</Text>
+                {this.state.calcioDieta < this.state.calcioRecomendado ? (
+                  <Text style={styles.labelRodape}>Cálcio da Dieta Baixo:</Text>
+                ) : (
+                  <Text style={styles.labelRodape}>
+                    Cálcio da Dieta Adequado:
+                  </Text>
+                )}
               </Col>
               <Col size={1}>
                 {this.state.calcioDieta < this.state.calcioRecomendado ? (
@@ -427,20 +432,26 @@ export default class Calcio extends Component {
       <Container style={stylesComuns.container}>
         <StatusBar setBarStyle={{style: 'light-content', animated: true}} />
         {this.renderCabecalho()}
-
-        <Accordion
-          dataArray={this.state.alimentos}
-          animation={true}
-          expanded={0}
-          renderHeader={this.renderHeaderAccordion}
-          renderContent={item => (
-            <Card dataArray={item.tabAlimentos} renderRow={this.renderLinha} />
-          )}
-        />
+        <Content ref={c => (this.componenteConteudo = c)}>
+          {this.renderFormulario()}
+          <Accordion
+            style={{width: '100%', marginLeft: 0, marginRight: 0}}
+            dataArray={this.state.alimentos}
+            animation={true}
+            renderHeader={this.renderHeaderAccordion}
+            renderContent={item => (
+              <Card
+                style={{width: '100%', marginLeft: 0, marginRight: 0}}
+                dataArray={item.tabAlimentos}
+                renderRow={this.renderLinha}
+              />
+            )}
+          />
+        </Content>
 
         <KeyboardAvoidingView
           style={stylesComuns.container}
-          behavior="padding"
+          behavior="height"
           enabled>
           {this.renderRodape()}
         </KeyboardAvoidingView>
@@ -464,11 +475,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#4090f4',
-    marginTop: 5,
+    marginTop: 1,
   },
   textoTituloSecao: {
-    fontWeight: 'bold',
-    fontSize: 20,
+    fontWeight: 'normal',
+    fontSize: 18,
     color: '#ffffff',
   },
   textoAlimento: {
@@ -496,21 +507,21 @@ const styles = StyleSheet.create({
     marginRight: 20,
   },
   rodape: {
-    height: 80,
     borderTopColor: '#ffffff',
     borderTopWidth: 3,
-    backgroundColor: '#4090f4',
-    paddingTop: 5,
-    paddingLeft: 10,
+    backgroundColor: '#E9E9E9',
+    paddingTop: 3,
+    paddingBottom: 3,
+    paddingLeft: 5,
   },
   labelRodape: {
-    fontSize: 22,
-    color: '#000000',
-    fontWeight: 'bold',
+    fontSize: 18,
+    color: '#222222',
+    fontWeight: 'normal',
   },
   textoResultado: {
     fontSize: 20,
-    color: '#ffffff',
+    color: '#4090f4',
     fontWeight: 'bold',
     textAlign: 'right',
   },

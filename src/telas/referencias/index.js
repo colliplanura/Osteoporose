@@ -12,7 +12,9 @@ export default class Referencias extends Component {
       <ListItem noBorder style={stylesComuns.itemParagrafo}>
         <Grid>
           <Row>
-            <Text style={stylesComuns.paragrafo}>{item.item.texto}</Text>
+            <Text style={stylesComuns.paragrafo}>
+              {item.item.key}. {item.item.texto}
+            </Text>
           </Row>
           {item.item.imagem && (
             <Row>

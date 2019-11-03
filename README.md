@@ -1,9 +1,9 @@
 # Bem-vindo ao aplicativo Osteoporose 👋
-![Version](https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000)
-[![License: LGPL-3.0-ou-posterior](https://img.shields.io/badge/License-LGPL-3.0-ou-posterior-yellow.svg)](https://www.gnu.org/licenses/lgpl-3.0.html)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/colliplanura/Osteoporose)
+[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 [![Twitter: colliplanura](https://img.shields.io/twitter/follow/colliplanura.svg?style=social)](https://twitter.com/colliplanura)
 
-> Aplicativo para celulares com Informações sobre Osteoporose, Cálcio na dieta e Risco de Fraturas
+> Aplicativo para Celulares com Informações sobre Osteoporose, Cálcio na Dieta e Risco de Fraturas
 
 ### 🏠 [Homepage](https://github.com/colliplanura/Osteoporose)
 

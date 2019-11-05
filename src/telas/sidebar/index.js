@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Image, StatusBar} from 'react-native';
+import {Image, StatusBar, Platform, Linking} from 'react-native';
 import {
   Content,
   Text,
@@ -16,6 +16,7 @@ import {
 import stylesComuns from '../../styles/stylesComuns';
 import styles from './style';
 
+const urlAbrasso = 'https://abrasso.org.br/calculadora/calculadora/';
 const drawerCover = require('../../../assets/imagens/Osteoporose-horizontal.png');
 const datas = [
   {
@@ -92,6 +93,14 @@ export default class SideBar extends Component {
     };
   }
 
+  abreTela = rota => {
+    if (rota === 'Fratura' && Platform.OS === 'ios') {
+      Linking.openURL(urlAbrasso);
+    } else {
+      this.props.navigation.navigate(rota);
+    }
+  };
+
   render() {
     return (
       <Container style={styles.sideBar}>
@@ -109,9 +118,7 @@ export default class SideBar extends Component {
           <List
             dataArray={datas}
             renderRow={data => (
-              <ListItem
-                button
-                onPress={() => this.props.navigation.navigate(data.route)}>
+              <ListItem button onPress={() => this.abreTela(data.route)}>
                 <Left>
                   <Icon
                     active

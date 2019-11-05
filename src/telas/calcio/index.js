@@ -1,6 +1,12 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {KeyboardAvoidingView, StyleSheet, View, StatusBar} from 'react-native';
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  View,
+  StatusBar,
+  Platform,
+} from 'react-native';
 import {
   Container,
   Body,
@@ -30,12 +36,12 @@ import {alimentos} from '../../../assets/dados/alimentos-abrasso-estruturado.jso
 
 const optionsSexo = [
   {
-    label: 'Masculino',
+    label: ' Masculino',
     value: 'M',
     customIcon: <Icon type="FontAwesome" name="male" />,
   },
   {
-    label: 'Feminino',
+    label: ' Feminino',
     value: 'F',
     customIcon: <Icon type="FontAwesome" name="female" />,
   },
@@ -43,17 +49,17 @@ const optionsSexo = [
 
 const optionsPeriodo = [
   {
-    label: 'Diário',
+    label: ' Diário',
     value: 'D',
     customIcon: <Icon type="MaterialCommunityIcons" name="calendar-today" />,
   },
   {
-    label: 'Semanal',
+    label: ' Semanal',
     value: 'S',
     customIcon: <Icon type="MaterialCommunityIcons" name="calendar-week" />,
   },
   {
-    label: 'Mensal',
+    label: ' Mensal',
     value: 'M',
     customIcon: <Icon type="MaterialCommunityIcons" name="calendar-month" />,
   },
@@ -63,7 +69,7 @@ export default class Calcio extends Component {
   state = {
     alimentos: alimentos,
     calcioDieta: 0,
-    calcioRecomendado: 0,
+    calcioRecomendado: 200,
     idadeAnos: '0',
     idadeMeses: '0',
     sexo: 'F',
@@ -72,11 +78,25 @@ export default class Calcio extends Component {
   };
 
   alterarIdadeAnos = text => {
-    this.setState({idadeAnos: text}, this.recalcularCalcioRecomendado);
+    let idadeAnos = text.replace(/\D/g, '');
+    if (idadeAnos) {
+      idadeAnos = parseInt(idadeAnos, 10);
+    } else {
+      idadeAnos = 0;
+    }
+    this.setState(
+      {idadeAnos: idadeAnos.toString()},
+      this.recalcularCalcioRecomendado,
+    );
   };
 
   alterarIdadeMeses = text => {
-    let idadeMeses = isNaN(text) ? 0 : parseInt(text, 10);
+    let idadeMeses = text.replace(/\D/g, '');
+    if (idadeMeses) {
+      idadeMeses = parseInt(idadeMeses, 10);
+    } else {
+      idadeMeses = 0;
+    }
     if (idadeMeses > 12) {
       idadeMeses = 12;
     }
@@ -187,6 +207,10 @@ export default class Calcio extends Component {
       this.periodoSwitch.toggleItem(0);
     }
 
+    if (this.accordionAlimentos) {
+      this.accordionAlimentos.setSelected(-1);
+    }
+
     this.state.alimentos.forEach(tipo => {
       tipo.tabAlimentos.forEach(alimento => {
         alimento.quantidade = 0;
@@ -231,7 +255,7 @@ export default class Calcio extends Component {
         <Row style={styles.linhaFormulario}>
           <Col size={3}>
             <Item floatingLabel>
-              <Label>Idade anos</Label>
+              <Label style={styles.textoLabelFormulario}>Idade anos</Label>
               <Input
                 selectTextOnFocus={true}
                 placeholder="anos"
@@ -241,6 +265,7 @@ export default class Calcio extends Component {
                 value={this.state.idadeAnos}
                 style={{borderColor: '#4090f4'}}
                 onChangeText={this.alterarIdadeAnos}
+                returnKeyType="next"
               />
             </Item>
           </Col>
@@ -248,7 +273,7 @@ export default class Calcio extends Component {
             parseInt(this.state.idadeAnos, 10) === 0) && (
             <Col size={1}>
               <Item floatingLabel>
-                <Label>meses</Label>
+                <Label style={styles.textoLabelFormulario}>meses</Label>
                 <Input
                   selectTextOnFocus={true}
                   placeholder="meses"
@@ -303,14 +328,14 @@ export default class Calcio extends Component {
             />
           </Col>
         </Row>
-        <Row style={styles.textoLabelFormulario}>
+        <Row>
           <Col>
             <Text style={styles.textoOrientacaoPeriodicidade}>
               {this.state.periodo === 'D'
-                ? 'Informe, dos alimentos abaixo, os consumidos ontem'
+                ? 'Informe abaixo os itens consumidos ontem'
                 : this.state.periodo === 'S'
-                ? 'Informe, dos alimentos abaixo, os consumidos na última semana'
-                : 'Informe, dos alimentos abaixo, os consumidos no último mes'}
+                ? 'Informe abaixo os itens consumidos na última semana'
+                : 'Informe abaixo os itens consumidos no último mes'}
             </Text>
           </Col>
         </Row>
@@ -435,6 +460,7 @@ export default class Calcio extends Component {
         <Content ref={c => (this.componenteConteudo = c)}>
           {this.renderFormulario()}
           <Accordion
+            ref={ref => (this.accordionAlimentos = ref)}
             style={{width: '100%', marginLeft: 0, marginRight: 0}}
             dataArray={this.state.alimentos}
             animation={true}
@@ -450,9 +476,11 @@ export default class Calcio extends Component {
         </Content>
 
         <KeyboardAvoidingView
-          style={stylesComuns.container}
-          behavior="height"
-          enabled>
+          behavior={Platform.select({
+            ios: 'padding',
+            android: 'height',
+          })}
+          keyboardVerticalOffset={Platform.select({ios: -25, android: 0})}>
           {this.renderRodape()}
         </KeyboardAvoidingView>
       </Container>
@@ -494,11 +522,13 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textoLabelFormulario: {
-    color: '#A0A0A0',
+    color: '#000000',
+    fontWeight: '500',
   },
   textoOrientacaoPeriodicidade: {
     color: '#000000',
     fontSize: 16,
+    fontWeight: 'bold',
     textAlign: 'center',
     marginVertical: 10,
   },

@@ -6,9 +6,9 @@ Todas as alterações notáveis ​​neste projeto serão documentadas neste ar
 
 # 
 
-## [![](https://img.shields.io/badge/Version-Unreleased-4090f4?style=for-the-badge)](https://github.com/colliplanura/Osteoporose/compare/v1.0.1...HEAD)
+## [![](https://img.shields.io/badge/Version-Unreleased-4090f4?style=for-the-badge)](https://github.com/colliplanura/Osteoporose/compare/v1.0.2...HEAD)
 
-## [![GitHub package.json version](https://img.shields.io/github/package-json/v/colliplanura/Osteoporose?color=4090f4&style=for-the-badge)](https://github.com/colliplanura/Osteoporose/compare/v0.0.1...v1.0.1) ![](https://img.shields.io/static/v1?label=Data&message=2019-11-03&color=4090f4&style=for-the-badge)
+## [![GitHub package.json version](https://img.shields.io/github/package-json/v/colliplanura/Osteoporose?color=4090f4&style=for-the-badge)](https://github.com/colliplanura/Osteoporose/compare/v1.0.1...v1.0.2) ![](https://img.shields.io/static/v1?label=Data&message=2019-11-03&color=4090f4&style=for-the-badge)
 
 ### Changed
 

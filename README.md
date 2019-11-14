@@ -5,7 +5,7 @@
 
 > Aplicativo para Celulares com Informações sobre Osteoporose, Cálcio na Dieta e Risco de Fraturas
 
-### 🏠 [Homepage](https://github.com/colliplanura/Osteoporose)
+### 🏠 [Changelog](CHANGELOG.md)
 
 ## Instalação/Execução
 
